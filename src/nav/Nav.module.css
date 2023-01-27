@@ -1,6 +1,8 @@
 
-
-.header {
-    height: 80px;
-    background-color: #121519!important;
+.nav {
+    justify-content: space-between;
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid red;
 }

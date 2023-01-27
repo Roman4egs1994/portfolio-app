@@ -1,9 +1,9 @@
-.worksBlock {
+.projectsBlock {
     height: 100vh;
     background-color: #c7b054;
 }
 
-.worksContainer {
+.projectContainer {
     flex-direction: column;
     justify-content: flex-start;
 }
@@ -12,7 +12,10 @@
     background-color: #ded9d9;
 }
 
-.works {
+.projects {
     border: 1px solid;
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }

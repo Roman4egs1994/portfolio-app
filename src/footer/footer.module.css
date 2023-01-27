@@ -1,0 +1,7 @@
+.footerBlock {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40vh;
+    background-color: #282828 !important;
+}

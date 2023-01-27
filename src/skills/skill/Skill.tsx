@@ -19,10 +19,10 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
             <div className={styled.icon}>
                 icon
             </div>
-            <h3>{title}</h3>
-            <span className={styled.description}>
-                {description}
-            </span>
+            <div className={styled.description}>
+                <h3>{title}</h3>
+                <span>{description}</span>
+            </div>
         </div>
     );
 };

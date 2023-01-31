@@ -11,25 +11,25 @@ export const Projects = () => {
     const stateProject = [
         {
             id: v1(),
-            image: "https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png",
+            image: "",
             title: "Social Network",
             description: "Социальная сеть Социальная сеть Социальная сеть Социальная сеть Социальная сеть "
         },
         {
             id: v1(),
-            image: "https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png",
+            image: "",
             title: "Todolist",
             description: "Todolist Todolist Todolist TodolistTodolist TodolistTodolistTodolist TodolistTodolist"
         },
         {
             id: v1(),
-            image: "https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png",
+            image: "",
             title: "Counter",
             description: "CounterCounterCounterCounterCounter rCounterrCounterrCounterrCounterCounter CounterCounter   CounterCounter"
         }
     ]
 
-    const mappedProject = stateProject.map(el => <Project key={el.id} image={el.image} title={el.title} description={el.description}/>)
+    const mappedProject = stateProject.map(el => <Project key={el.id} title={el.title} description={el.description}/>)
 
     return (
         <div className={styled.projectsBlock}>

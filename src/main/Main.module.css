@@ -1,18 +1,9 @@
 .mainBlock {
     /*height: 100vh; вся высота экрана*/
-    height: 100vh;
+    min-height-height: 100vh;
     background-color: #fda3a3;
 }
 
-/*.container {*/
-/*    border: 1px solid;*/
-/*    height: 100%;*/
-/*    width: 80%;*/
-/*    margin: 0 auto;*/
-/*    display: flex;*/
-/*    align-items: center;*/
-/*    justify-content: space-between;*/
-/*}*/
 
 
 .greetingText {

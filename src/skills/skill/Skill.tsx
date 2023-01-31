@@ -16,13 +16,12 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
 
     return (
         <div className={styled.skill}>
-            <div className={styled.icon}>
-                icon
-            </div>
-            <div className={styled.description}>
-                <h3>{title}</h3>
-                <span>{description}</span>
-            </div>
+
+            <div className={styled.icon}></div>
+            <h3 className={styled.title}>{title}</h3>
+            <span className={styled.descriptionSpan}>{description}</span>
+
+
         </div>
     );
 };

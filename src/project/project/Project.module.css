@@ -1,5 +1,5 @@
 .project {
-    width: 400px;
+    width: 350px;
     background-color: #808f15;
     display: flex;
     flex-direction: column;
@@ -8,20 +8,23 @@
 }
 
 .imageProjectAndBtn {
-    position: relative;
-    width: 400px;
+    width: 100%;
     height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-image: url("https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png");
+    background-size: cover;
+    background-position: center;
 }
 
 .imageProjectAndBtn img {
-    width: 400px;
-    height: 300px;
+    width: 100%;
+    /*height: 300px;*/
 }
 
 .watchProjectBtn {
-    position: absolute;
-    left: 141px;
-    top: 130px;
     width: 110px;
     height: 38px;
     background-color: #78a7e7;
@@ -32,4 +35,9 @@
     letter-spacing: 2px;
     font-weight: 530;
     cursor: pointer;
+}
+
+.descriptionSpan {
+    width: 100%;
+    min-height: 300px;
 }

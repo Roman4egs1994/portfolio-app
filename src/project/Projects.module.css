@@ -1,6 +1,7 @@
 .projectsBlock {
-    min-height: 100vh;
-    background-color: #c7b054;
+    /*min-height: 100vh;*/
+    background-color: #111010;
+    padding: 75px 0  75px 0;
 }
 
 .projectContainer {
@@ -9,8 +10,104 @@
 }
 
 .title {
-    background-color: #ded9d9;
+    text-align: center;
+    position: relative;
 }
+
+.title p {
+    color: #9f9f9f;
+    font-family: Poppins,sans-serif;
+    font-weight: 400;
+    line-height: 1.95;
+    font-size: 15px;
+    margin: 0 0 17px 0;
+
+}
+
+.animatedBar {
+    content: '';
+    display: block;
+    height: 4px;
+    /*left: 0;*/
+    box-sizing: border-box;
+    margin: 0 auto 0 auto;
+    position: relative;
+    right: 0;
+    width: 75px;
+    background-color: #009e66;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+}
+
+
+.animatedBar::before {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: barAnimation;
+    animation-timing-function: linear;
+    background-color: #101010;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    left: 8px;
+}
+
+
+.animatedBar::after {
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: barAnimation;
+    animation-timing-function: linear;
+    background-color: #101010;
+    content: '';
+    height: 100%;
+    position: absolute;
+    top: 0;
+    width: 4px;
+    left: 0;
+}
+
+@-webkit-keyframes barAnimation {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(75px);
+        transform: translateX(75px)
+    }
+}
+
+@keyframes barAnimation {
+    from {
+        -webkit-transform: translateX(0);
+        transform: translateX(0)
+    }
+
+    to {
+        -webkit-transform: translateX(75px);
+        transform: translateX(75px)
+    }
+}
+
+.title h2 {
+    color: #f0f0f0;;
+    font-size: 46px;
+    font-family: Poppins,sans-serif;
+    margin: 0 0 37px;
+    /*margin-bottom: 37px;*/
+    display: inline-block;
+    font-weight: 700;
+    letter-spacing: -.25px;
+    line-height: 100%;
+    /*text-transform: capitalize;*/
+    /*z-index: 9;*/
+}
+
+
 
 .projects {
     border: 1px solid;
@@ -18,4 +115,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+}
+
+/*до тех пор пока максимальная ширина не будет равна 921*/
+@media screen and (max-width: 921px) {
+    .projects {
+        justify-content: center;
+    }
 }

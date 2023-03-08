@@ -34,7 +34,11 @@ export const Projects = () => {
     return (
         <div className={styled.projectsBlock}>
             <div className={projectsContainer}>
-                <h2 className={styled.title}>Projects</h2>
+                <div className={styled.title}>
+                    <p>Showcasing some of my best work</p>
+                    <h2>Projects</h2>
+                    <div className={styled.animatedBar}></div>
+                </div>
                 <div className={styled.projects}>
                     {mappedProject}
                 </div>

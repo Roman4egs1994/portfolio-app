@@ -1,10 +1,11 @@
 .container {
-    border: 1px solid;
+    /*border: 1px solid;*/
     min-height: 100%;
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
+    padding: 75px 0  75px 0;
 }

@@ -38,7 +38,7 @@
     cursor: pointer;
 }
 
-.descriptionSpan {
-    width: 100%;
-    min-height: 300px;
-}
+/*.descriptionSpan {*/
+/*    !*width: 100%;*!*/
+/*    !*min-height: 300px;*!*/
+/*}*/

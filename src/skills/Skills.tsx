@@ -5,6 +5,7 @@ import styleContainer from '../common/styles/Container.module.css'
 
 import {Skill} from "./skill/Skill";
 import {v1} from "uuid";
+import Title from "../common/componets/title/Title";
 
 type SkillsType = {
     id: string
@@ -28,7 +29,8 @@ export const Skills = () => {
     return (
         <div className={styled.skillsBlock}>
             <div className={divSkillsContainer}>
-                <h2 className={styled.title}>Skills</h2>
+                <Title description={'This is my skills'} title={"Skills"}/>
+                {/*<h2 className={styled.title}>Skills</h2>*/}
                 <div className={styled.skills}>
                     {mySkills}
                 </div>

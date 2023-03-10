@@ -20,50 +20,64 @@ export const Projects = () => {
             id: v1(),
             image: imageProject1 ,
             title: "Social Network",
-            description: "Социальная сеть Социальная сеть Социальная сеть Социальная сеть Социальная сеть "
+            description: "Социальная сеть Социальная сеть Социальная сеть Социальная сеть Социальная сеть ",
+            headerProject: 'Описание',
+            textProject: "Описание описания",
+            href: "www.google.com"
         },
         {
             id: v1(),
             image: imageProject2,
             title: "Todolist",
-            description: "Todolist Todolist Todolist TodolistTodolist TodolistTodolistTodolist TodolistTodolist"
+            headerProject: 'Описание',
+            href: "www.google.com"
         },
         {
             id: v1(),
             image: imageProject3,
             title: "Counter",
-            description: "CounterCounterCounterCounterCounter rCounterrCounterrCounterrCounterCounter CounterCounter   CounterCounter"
+            headerProject: 'Описание',
+            href: "www.google.com"
         },
         {
             id: v1(),
             image: imageProject4,
             title: "Counter",
-            description: "CounterCounterCounterCounterCounter rCounterrCounterrCounterrCounterCounter CounterCounter   CounterCounter"
+            headerProject: 'Описание',
+            href: "www.google.com"
         },
         {
             id: v1(),
             image: imageProject5,
             title: "Counter",
-            description: "CounterCounterCounterCounterCounter rCounterrCounterrCounterrCounterCounter CounterCounter   CounterCounter"
+            headerProject: 'Описание',
+            href: "www.google.com"
         },
         {
             id: v1(),
             image: imageProject6,
             title: "Counter",
-            description: "CounterCounterCounterCounterCounter rCounterrCounterrCounterrCounterCounter CounterCounter   CounterCounter"
+            headerProject: 'Описание',
+            href: "www.google.com"
         },
     ]
 
-    const mappedProject = stateProject.map(el => <Project key={el.id} title={el.title} description={el.description} imageProject={el.image}/>)
+    const mappedProject = stateProject.map(el => <Project
+        key={el.id}
+        title={el.title}
+        imageProject={el.image}
+        headerProject={el.headerProject}
+        href={el.href}
+
+    />)
 
     return (
         <div className={styled.projectsBlock}>
             <div className={projectsContainer}>
-                <Title title={'Portfolio'} description={'Showcasing some of my best work'}/>
+                <Title title={'Project'} description={'Showcasing some of my best work'}/>
                 <div className={styled.projects}>
                     {mappedProject}
                 </div>
-                {/*<img src={imageProject1} alt="asdas"/>*/}
             </div>
         </div>
     );

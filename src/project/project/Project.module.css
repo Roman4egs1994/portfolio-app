@@ -1,28 +1,27 @@
 .project {
-    width: 370px;
-    height: 400px;
-    background-color: #808f15;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
+    margin-top: 50px;
 }
 
 .imageProjectAndBtn {
-    width: 100%;
-    height: 275px;
+    /*width: 100%;*/
+    /*height: 275px;*/
     display: flex;
     justify-content: center;
     align-items: center;
 
-    background-image: url("https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png");
+    /*background-image: url("https://cdnb.ganttpro.com/uploads/2017/04/project-planning-and-a-project-plan.png");*/
     background-size: cover;
     background-position: center;
 }
 
 .imageProjectAndBtn img {
-    width: 100%;
-    /*height: 300px;*/
+    width: 370px;
+    height: auto;
+    vertical-align: middle;
 }
 
 .watchProjectBtn {

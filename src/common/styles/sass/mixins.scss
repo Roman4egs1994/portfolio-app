@@ -1,0 +1,9 @@
+@import "src/common/styles/sass/wariables";
+
+@mixin text ($fontSize, $lineHeight, $fontWeight) {
+  font-size: $fontSize;
+  line-height: $lineHeight;
+  font-weight: $fontWeight;
+  color: $textColorTitleDescription;
+  font-family: $fontFamilyText;
+}

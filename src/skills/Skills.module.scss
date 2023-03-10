@@ -1,0 +1,24 @@
+@import 'src/common/styles/sass/wariables';
+
+
+.skillsBlock {
+  background-color: $bgColor;
+
+  .skillsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .skills {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+
+
+
+

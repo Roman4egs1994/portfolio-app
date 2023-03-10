@@ -1,15 +1,15 @@
 import React from 'react';
-import styled from './Projects.module.css'
+import styled from './Projects.module.scss'
 import styleContainer from './../common/styles/Container.module.css'
 import {Project} from "./project/Project";
 import {v1} from "uuid";
 import Title from "../common/componets/title/Title";
-import imageProject1 from '../common/img/imageInProjects/item-1.jpg'
-import imageProject2 from '../common/img/imageInProjects/item-2.jpg'
-import imageProject3 from '../common/img/imageInProjects/item-3.jpg'
-import imageProject4 from '../common/img/imageInProjects/item-4.jpg'
-import imageProject5 from '../common/img/imageInProjects/item-5.jpg'
-import imageProject6 from '../common/img/imageInProjects/item-6.jpg'
+import imageProject1 from '../common/assets/imageProject/item-1.jpg'
+import imageProject2 from '../common/assets/imageProject/item-2.jpg'
+import imageProject3 from '../common/assets/imageProject/item-3.jpg'
+import imageProject4 from '../common/assets/imageProject/item-4.jpg'
+import imageProject5 from '../common/assets/imageProject/item-5.jpg'
+import imageProject6 from '../common/assets/imageProject/item-6.jpg'
 
 export const Projects = () => {
 
@@ -68,13 +68,12 @@ export const Projects = () => {
         imageProject={el.image}
         headerProject={el.headerProject}
         href={el.href}
-
     />)
 
     return (
         <div className={styled.projectsBlock}>
             <div className={projectsContainer}>
-                <Title title={'Project'} description={'Showcasing some of my best work'}/>
+                <Title title={'Projects'} description={'Showcasing some of my best work'}/>
                 <div className={styled.projects}>
                     {mappedProject}
                 </div>

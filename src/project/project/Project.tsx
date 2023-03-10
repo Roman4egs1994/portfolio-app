@@ -1,6 +1,6 @@
 import React from 'react';
-import styled from './Project.module.css'
-import animation from './ProjectAnimation.module.css'
+import styled from './Project.module.scss'
+import animation from './ProjectAnimation.module.scss'
 
 type ProjectPropsType = {
     title: string
@@ -21,7 +21,7 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
             <div className={styled.imageProjectAndBtn}>
                 <ul className={animation.hoverEffectScale}>
                     <li>
-                        <img src={imageProject} alt=""/>
+                        <img src={imageProject} alt="image project"/>
                             <div>
                                 <h2>{headerProject}</h2>
                                 <a href={href}>more info</a>
@@ -33,5 +33,3 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
     );
 };
 
-// <img src={imageProject} alt={'image project'}/>
-{/*<button className={styled.watchProjectBtn}>Watch</button>*/}

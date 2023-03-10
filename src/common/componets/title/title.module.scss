@@ -1,0 +1,90 @@
+@import "src/common/styles/sass/wariables";
+@import "src/common/styles/sass/mixins";
+
+.title {
+  text-align: center;
+  position: relative;
+
+  p {
+    @include text(15px,1.95,400);
+    margin: 0 0 17px 0;
+  }
+
+  h2 {
+    @include text(46px,100%,700);
+    color: $textColorTitle;
+    margin: 0 0 37px;
+    display: inline-block;
+    letter-spacing: -.25px;
+  }
+}
+
+
+.animatedBar {
+  content: '';
+  display: block;
+  height: 4px;
+  box-sizing: border-box;
+  margin: 0 auto 0 auto;
+  position: relative;
+  right: 0;
+  width: 75px;
+  background-color:$colorElementsDecoration;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: 100%;
+}
+
+
+.animatedBar::before {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: barAnimation;
+  animation-timing-function: linear;
+  background-color: #111010;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 8px;
+}
+
+
+.animatedBar::after {
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-name: barAnimation;
+  animation-timing-function: linear;
+  background-color: #111010;
+  content: '';
+  height: 100%;
+  position: absolute;
+  top: 0;
+  width: 4px;
+  left: 0;
+}
+
+@-webkit-keyframes barAnimation {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  to {
+    -webkit-transform: translateX(75px);
+    transform: translateX(75px)
+  }
+}
+
+@keyframes barAnimation {
+  from {
+    -webkit-transform: translateX(0);
+    transform: translateX(0)
+  }
+
+  to {
+    -webkit-transform: translateX(75px);
+    transform: translateX(75px)
+  }
+}
+

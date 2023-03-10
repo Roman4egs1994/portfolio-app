@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from './Skills.module.css'
+import styled from './Skills.module.scss'
 // import styleContainer from './../common/styles/Container.module.css'
 import styleContainer from '../common/styles/Container.module.css'
 
@@ -30,7 +30,6 @@ export const Skills = () => {
         <div className={styled.skillsBlock}>
             <div className={divSkillsContainer}>
                 <Title description={'This is my skills'} title={"Skills"}/>
-                {/*<h2 className={styled.title}>Skills</h2>*/}
                 <div className={styled.skills}>
                     {mySkills}
                 </div>

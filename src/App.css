@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 
-:root {
-    --background-dark-theme: #111010;
-}
+/*:root {*/
+/*    --background-dark-theme: #111010;*/
+/*}*/
 
 ::selection {
     background-color: #009e66;

@@ -1,3 +1,5 @@
+@import "src/common/styles/sass/wariables.sass";
+
 .hoverEffectScale {
     list-style:none;
     margin: 0 auto;
@@ -22,15 +24,11 @@
     line-height: 1.8;
     margin-bottom: 10px;
 }
-/*.hoverEffectScale li p{*/
-/*    color: #fff;*/
-/*    margin: 5px;*/
-/*}*/
 
 /*кнопка*/
 .hoverEffectScale li a {
     text-decoration: none;
-    color: #009e66;
+    color:$colorElementsDecoration;
     margin: 0 auto;
     transition: all 0.3s ease-in-out;
     display: inline-block;
@@ -40,7 +38,7 @@
 }
 .hoverEffectScale li a:hover {
     /*background: #454545;*/
-    color: #009e40
+    color: $colorElementsDecorationHover
 }
 /* Выезжающий блок с текстом */
 .hoverEffectScale li > div {
@@ -59,7 +57,7 @@
 }
 .hoverEffectScale li div {
     opacity: 0;
-    background-color: rgba(0, 0, 0, 0.87); /* Фон блока при наведении */
+    background-color: rgba(0, 0, 0, 0.89); /* Фон блока при наведении */
     transition: all 0.4s ease-in-out;
     color: #b41919;
 }

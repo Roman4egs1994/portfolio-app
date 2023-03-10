@@ -13,6 +13,8 @@
     "@types/react-dom": "^18.0.0",
     "@types/uuid": "^9.0.0",
     "gh-pages": "^5.0.0",
+    "install": "^0.13.0",
+    "node-sass": "^8.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-scripts": "5.0.1",

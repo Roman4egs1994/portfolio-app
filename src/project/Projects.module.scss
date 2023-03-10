@@ -1,0 +1,23 @@
+@import "src/common/styles/sass/wariables";
+
+
+.projectsBlock {
+  background-color: $bgColor;
+
+  .projectContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .projects {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      @media screen and (max-width: 1200px) {
+        justify-content: center;
+      }
+    }
+
+  }
+}
+

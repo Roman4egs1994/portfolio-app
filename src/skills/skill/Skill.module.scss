@@ -10,13 +10,15 @@
   box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
   margin-bottom: 30px;
   padding: 38px 42px;
-  transition: all .15s ease-in-out;
+  transition: all .1s ease-in-out;
+  &:hover{
+    border-bottom-color: $colorElementsDecoration
+  }
 
   .icon {
     color: $colorElementsDecoration;
     height: 60px;
     width: 60px;
-    background-color: #78a7e7;
     margin-bottom: 22px;
   }
 

@@ -1,0 +1,41 @@
+@import "src/common/styles/sass/wariables";
+@import "src/common/styles/sass/mixins";
+
+.skill {
+  width: 370px;
+  height: auto;
+  box-sizing: border-box;
+  background-color: #161616;
+  border-bottom: 2px solid transparent;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, .2);
+  margin-bottom: 30px;
+  padding: 38px 42px;
+  transition: all .15s ease-in-out;
+
+  .icon {
+    color: $colorElementsDecoration;
+    height: 60px;
+    width: 60px;
+    background-color: #78a7e7;
+    margin-bottom: 22px;
+  }
+
+  .title {
+    @include text(20px,1.2,500);
+    letter-spacing: -.5px;
+    margin-bottom: 14px;
+    color: #f3f3f3;
+  }
+
+  .description {
+    @include text(14px,1.95,400);
+    word-break: break-all;
+    text-align: left;
+  }
+}
+
+
+
+
+
+

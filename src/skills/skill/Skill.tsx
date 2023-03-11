@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from './Skill.module.css'
+import styled from './Skill.module.scss'
 
 type SkillPropsType = {
     title: string
@@ -16,12 +16,9 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
 
     return (
         <div className={styled.skill}>
-
             <div className={styled.icon}></div>
             <h3 className={styled.title}>{title}</h3>
-            <span className={styled.descriptionSpan}>{description}</span>
-
-
+            <span className={styled.description}>{description}</span>
         </div>
     );
 };

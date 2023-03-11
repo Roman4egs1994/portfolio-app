@@ -17,9 +17,12 @@ type SkillsType = {
 export const Skills = () => {
 
     const skills: SkillsType[] = [
-        {id: v1(), title: "JS", description: "texttexttexttexttexttexttexttexttexttextexttextexttexttexttext"},
-        {id: v1(), title: "CSS", description: 'texttexttexttexttexttexttexttexttexttexttexttext'},
-        {id: v1(), title: "React", description: "texttexttexttexttexttexttexttexttexttexttexttext"}
+        {id: v1(), title: "React", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."},
+        {id: v1(), title: "TypeScript", description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'},
+        {id: v1(), title: "CSS", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."},
+        {id: v1(), title: "Figma", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."},
+        {id: v1(), title: "Storybook", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."},
+        {id: v1(), title: "Redux", description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."}
     ]
 
     const divSkillsContainer = styleContainer.container + " " + styled.skillsContainer;

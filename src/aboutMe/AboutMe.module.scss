@@ -1,0 +1,112 @@
+@import "src/common/styles/sass/wariables";
+@import "src/common/styles/sass/mixins";
+
+
+.mainBlock {
+  background-color: $bgColor;
+  box-sizing: border-box;
+
+  .mainContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .main {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      align-items: center;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      .photo {
+        width: 500px;
+        height: auto;
+        padding: 15px;
+        //background-color: white;
+
+        img {
+          width: 430px;
+          height: auto;
+        }
+      }
+
+      .profile {
+        width: 670px;
+        h2 {
+          @include text(24px,1.2,500);
+          color: $colorElementsDecoration;
+          margin: 0 0 15px
+        }
+        h6 {
+          @include text(31px,1.6,700);
+          color:$textColorTitle;
+          margin: 0 0 16px;
+        }
+       .text {
+         @include text(15,1.95,400);
+         border-bottom: 2px solid rgba(255,255,255,.08);
+         margin-bottom: 0;
+         padding: 0 0 29px;
+       }
+
+
+        .cvAndSocialNetworks{
+          display: flex;
+          align-items: center;
+
+          a{
+            color: #ffffff;
+            text-decoration: none;
+            margin-right: 23px;
+            background-color: #009e66!important;
+            border: 1px solid #009e66!important;
+            border-radius: 30px;
+            font-size: 14px;
+            font-family: Poppins, sans-serif;
+            padding: 10px 35px;
+            isplay: inline-block;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: center;
+            transition: color .10s ease-in-out,background-color .10s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+            user-select: none;
+            vertical-align: middle;
+            &:hover{
+              background-color: #008c5c !important;
+            }
+          }
+          .followSocialNetwork{
+            display: flex;
+            align-items: center;
+            padding-inline-start: 0;
+            &::before{
+              background-color: rgba(255,255,255,.25);
+              content: '';
+              height: 2px;
+              margin-right: 23px;
+              width: 60px;
+            }
+            li{
+              list-style: none;
+              padding-left: 0;
+              color: white;
+              margin-right: 5px;
+            }
+
+
+          }
+        }
+      }
+    }
+
+  }
+}
+
+
+
+
+
+
+
+

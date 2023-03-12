@@ -1,0 +1,26 @@
+@import "src/common/styles/sass/wariables";
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    background-color: $bgColor;
+    padding: 23px 50px;
+    left: 0;
+    //position: fixed;
+    right: 0;
+    top: 0;
+    //z-index: 1030;
+
+    .navBarBrand {
+        display: inline-block;
+        font-size: 1.25rem;
+        line-height: inherit;
+        margin-right: 1rem;
+        padding-bottom: 0.3125rem;
+        padding-top: 0.3125rem;
+        white-space: nowrap;
+    }
+
+}

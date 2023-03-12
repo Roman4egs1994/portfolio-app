@@ -1,0 +1,36 @@
+@import "src/common/styles/sass/wariables";
+
+
+.navbar {
+    justify-content: space-between;
+    width: 400px;
+    display: flex;
+    list-style-type: disc;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+    padding-inline-start: 40px;
+
+    .navItem{
+        list-style: none;
+        text-align: -webkit-match-parent;
+        .navLink{
+            color: #e6e6e6;
+            font-size: 16px;
+            padding: 0;
+            display: block;
+            transition: all .15s ease-in-out;
+            text-decoration: none;
+            margin-right: 32px;
+            font-family: Poppins,sans-serif;
+            line-height: 1.95;
+            font-weight: 400;
+            cursor: pointer;
+            &:hover{
+                color: #f8f8f8;
+            }
+        }
+    }
+
+}

@@ -4,4 +4,24 @@
   height: calc((1vh) * 95);
   background-color: #111;
   overflow: hidden;
+
+  .container{
+    height: 100%!important;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    width: 100%;
+
+    .containerCenter{
+      height: 100%!important;
+      align-items: center!important;
+      justify-content: center!important;
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+      box-sizing: border-box;
+    }
+  }
 }

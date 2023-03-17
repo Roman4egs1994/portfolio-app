@@ -19,6 +19,7 @@ export const Form = () => {
                         </div>
                         <div className={styled.formGroupMini}>
                             <input
+                                className={styled.formControl}
                                 type="email"
                                 placeholder="Email"
                             />
@@ -26,8 +27,8 @@ export const Form = () => {
                         <div className={styled.formGroupStandard}>
                             <input
                                 className={styled.formControlStandard}
-                                type="text"
-                                placeholder="asd "
+                                type="email"
+                                placeholder="Subject"
                             />
                         </div>
                         <div className={styled.formMessage}>
@@ -37,7 +38,7 @@ export const Form = () => {
                             />
                         </div>
                         <div className={styled.submit}>
-                            <ButtonLink  title={'Send Message'} styleSettings={styled.buttonForm}/>
+                            <ButtonLink title={'Send Message'} styleSettings={styled.buttonForm}/>
                         </div>
                     </div>
                 </form>

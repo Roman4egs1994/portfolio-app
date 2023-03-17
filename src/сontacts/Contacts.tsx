@@ -3,6 +3,7 @@ import styled from './Contacts.module.scss'
 import styleContainer from './../common/styles/Container.module.css'
 import {Form} from "./form/Form";
 import Title from "../common/componets/title/Title";
+import {ContactInfo} from "./ContactInfo/ContactInfo";
 
 export const Contacts = () => {
 
@@ -14,7 +15,7 @@ export const Contacts = () => {
                 <Title title={'Get in Touch'} description={'Feel free to contact me anytimes'}/>
                 <div className={styled.forms}>
                     <Form/>
-
+                    <ContactInfo/>
                 </div>
             </div>
         </div>

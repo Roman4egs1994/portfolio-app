@@ -1,0 +1,30 @@
+@import "src/common/styles/sass/wariables";
+@import "src/common/styles/sass/mixins";
+
+.contact {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 455px;
+
+  .contactInfo {
+    padding-left: 15px;
+    width: 450px;
+
+
+    .title {
+      @include text(1.5rem, 1.5, 500);
+      color: $textColorTitle;
+      margin: 0 0 12px 0;
+      text-align: left;
+    }
+
+    .description {
+      margin-bottom: 23px;
+      margin-top: 0;
+      display: block;
+      @include text(15px, 1.95, 400)
+    }
+
+  }
+}

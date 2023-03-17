@@ -1,0 +1,50 @@
+@import "src/common/styles/sass/wariables";
+@import "src/common/styles/sass/mixins";
+
+.listInfo {
+  list-style: none;
+  padding-left: 0;
+  @include text(15px, 1.95, 400);
+
+  .flex {
+    display: flex;
+
+    .icon {
+      margin-bottom: 13px;
+      font-size: 36px;
+      margin-right: 50px;
+      position: relative;
+
+      .logo{
+        color: #009e66;
+        left: 0;
+        line-height: 100%;
+        position: absolute;
+        top: 50%;
+        transform: translate(0,-50%);
+      }
+    }
+
+    .details{
+      border-left: 2px solid rgba(255,255,255,.15);
+      padding: 10px 0 10px 22px;
+      a{
+        color: #acb954;
+        text-decoration: none;
+        @include text(15px, 1.2, 500);
+        &:hover{
+          color: #797979;
+        }
+      }
+      .name {
+        @include text(15px, 1.2, 500);
+        font-family: $fontFamilyText ;
+        margin: 0;
+        color: $textColorTitle;
+
+
+      }
+    }
+
+  }
+}

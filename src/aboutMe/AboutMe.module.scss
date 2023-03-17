@@ -55,27 +55,6 @@
           display: flex;
           align-items: center;
 
-          a{
-            color: #ffffff;
-            text-decoration: none;
-            margin-right: 23px;
-            background-color: #009e66!important;
-            border: 1px solid #009e66!important;
-            border-radius: 30px;
-            font-size: 14px;
-            font-family: Poppins, sans-serif;
-            padding: 10px 35px;
-            isplay: inline-block;
-            font-weight: 500;
-            line-height: 1.5;
-            text-align: center;
-            transition: color .10s ease-in-out,background-color .10s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
-            user-select: none;
-            vertical-align: middle;
-            &:hover{
-              background-color: #008c5c !important;
-            }
-          }
           .followSocialNetwork{
             display: flex;
             align-items: center;

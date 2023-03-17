@@ -1,0 +1,28 @@
+@import "src/common/styles/sass/wariables.sass";
+
+.contactsBlock {
+  min-height: 100vh;
+  background-color: $bgColor;
+
+  .contactsContainer {
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .forms {
+      //border: 1px solid;
+      width: 100%;
+      /*height: auto;*/
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  }
+}
+
+//.title {
+//    background-color: #ded9d9;
+//}
+
+
+
+

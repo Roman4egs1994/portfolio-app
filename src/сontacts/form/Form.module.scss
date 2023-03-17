@@ -1,0 +1,142 @@
+@import "src/common/styles/sass/wariables.sass";
+@import "src/common/styles/sass/mixins";
+
+.formBlock {
+  padding-left: 15px;
+  padding-right: 15px;
+  position: relative;
+  width: 670px;
+  color: #9f9f9f;
+
+
+  .contactForm {
+    display: block;
+    margin-top: 0;
+
+
+
+    .title {
+      @include text(1.5rem, 1.5, 500);
+      color: $textColorTitle;
+      margin: 0 0 22px 0;
+      text-align: left;
+
+    }
+
+    .flex {
+      display: flex;
+      flex-wrap: wrap;
+      margin-left: -15px;
+      margin-right: -15px;
+
+      .formGroupMini {
+        width: 50%;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        margin-bottom: 25px;
+
+
+        input {
+          background-color: #161616;
+          border: none;
+          border-bottom: 1px solid #1d1d1d;
+          border-radius: 0;
+          font-size: 15px;
+          height: 44px;
+          padding: 9px 14px;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          color: #777;
+          width: 100%;
+          font-family: Poppins, sans-serif;
+          font-weight: 400;
+          line-height: 1.95;
+          text-align: left;
+
+          &:focus {
+            outline: 0;
+            outline-offset: 0;
+            border-bottom: 1px solid #00d187;
+          }
+        }
+      }
+
+
+      .formMessage {
+        margin-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        width: 100%;
+
+        textarea {
+          overflow: auto;
+          resize: vertical;
+          margin: 0;
+          min-height: 130px;
+          background-color: #161616;
+          border: none;
+          border-bottom: 1px solid #1d1d1d;
+          border-radius: 0;
+          font-size: 15px;
+          padding: 9px 14px;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          color: #777;
+          width: 100%;
+          font-family: Poppins, sans-serif;
+          font-weight: 400;
+          line-height: 1.95;
+          text-align: left;
+          &:focus{
+            outline: 0;
+            outline-offset: 0;
+            border-bottom: 1px solid #00d187;
+          }
+        }
+      }
+
+      .formGroupStandard{
+        margin-bottom: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        width: 100%;
+        color: #9f9f9f;
+        .formControlStandard{
+          background-color: #161616;
+          border: none;
+          border-bottom: 1px solid #1d1d1d;
+          border-radius: 0;
+          font-size: 15px;
+          height: 44px;
+          padding: 9px 14px;
+          transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+          color: #777;
+          width: 100%;
+          font-family: Poppins, sans-serif;
+          font-weight: 400;
+          line-height: 1.95;
+          text-align: left;
+          &:focus{
+            outline: 0;
+            outline-offset: 0;
+            border-bottom: 1px solid #00d187;
+          }
+        }
+      }
+
+      .submit{
+        padding-left: 15px;
+        padding-right: 15px;
+        position: relative;
+        width: 100%;
+      }
+      .buttonForm{
+        height: 43px;
+        //width: 156px;
+        padding: 10px 26px;
+      }
+
+    }
+  }
+}

@@ -1,21 +1,48 @@
 import React from 'react';
-import styled from './Form.module.css'
+import styled from './Form.module.scss'
+import {ButtonLink} from "../../common/componets/button/ButtonLink";
 
 
 export const Form = () => {
     return (
-        <div className={styled.form}>
-            <form className={styled.formDescription}>
-                <h3 className={styled.title}>Feedback</h3>
-                <span>Surname</span>
-                <input/>
-                <span>Name</span>
-                <input/>
-                <span>Description</span>
-                <textarea/>
-                <button className={styled.sendBtn}>Send</button>
-            </form>
-        </div>
+        <>
+            <div className={styled.formBlock}>
+                <form className={styled.contactForm}>
+                    <h4 className={styled.title}>Message Me</h4>
+                    <div className={styled.flex}>
+                        <div className={styled.formGroupMini}>
+                            <input
+                                className={styled.formControl}
+                                type="email"
+                                placeholder="Name"
+                            />
+                        </div>
+                        <div className={styled.formGroupMini}>
+                            <input
+                                type="email"
+                                placeholder="Email"
+                            />
+                        </div>
+                        <div className={styled.formGroupStandard}>
+                            <input
+                                className={styled.formControlStandard}
+                                type="text"
+                                placeholder="asd "
+                            />
+                        </div>
+                        <div className={styled.formMessage}>
+                            <textarea
+                                name="message"
+                                placeholder="Message"
+                            />
+                        </div>
+                        <div className={styled.submit}>
+                            <ButtonLink  title={'Send Message'} styleSettings={styled.buttonForm}/>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </>
     );
 };
 

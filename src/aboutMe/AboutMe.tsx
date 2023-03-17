@@ -4,6 +4,7 @@ import styleContainer from './../common/styles/Container.module.css'
 import photoProfile from '../common/assets/photoProfile/Profile.jpg'
 import Title from "../common/componets/title/Title";
 import {Address} from "./adress/Address";
+import {ButtonLink} from "../common/componets/button/ButtonLink";
 
 
 export const AboutMe = () => {
@@ -28,7 +29,8 @@ export const AboutMe = () => {
                             iterate fast and deliver faster.</p>
                         <Address/>
                         <div className={styled.cvAndSocialNetworks}>
-                            <a href="" role={'button'}>Download CV</a>
+                            {/*<a className={styled.buttonGreen} href="" role={'button'}>Download CV</a>*/}
+                           <ButtonLink title={'Download CV'}/>
                             <ul className={styled.followSocialNetwork}>
                                 <li className={styled.item}>s</li>
                                 <li className={styled.item}>s</li>

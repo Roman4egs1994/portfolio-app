@@ -11,31 +11,34 @@ export const Footer = () => {
         <div className={styled.footerBlock}>
             <div className={footerContainer}>
                 <div className={styled.hrFooter}></div>
-                <div className={styled.footerLogo}>
-                    <a href="">
-                        <img src="" alt="L O G O"/>
-                    </a>
+                <div className={styled.center}>
+                    <div className={styled.footerLogo}>
+                        <a href="">
+                            <img src="" alt="L O G O"/>
+                        </a>
+                    </div>
+                    <ul className={styled.siteSocial}>
+                        <li>
+                            <a href="">instagram</a>
+                        </li>
+                        <li>
+                            <a href="">LinkedIn</a>
+                        </li>
+                        <li>
+                            <a href="">Blog</a>
+                        </li>
+                        <li>
+                            <a href="">gmail</a>
+                        </li>
+                        <li>
+                            <a href="">telegram</a>
+                        </li>
+                    </ul>
+                    <p className={styled.footerText}>
+                        <small>&copy; Copyright © All rights reserved</small>
+                    </p>
                 </div>
-                <ul className={styled.siteSocial}>
-                    <li>
-                        <a href="">telegram</a>
-                    </li>
-                    <li>
-                        <a href="">LinkedIn</a>
-                    </li>
-                    <li>
-                        <a href="">instagram</a>
-                    </li>
-                    <li>
-                        <a href="">gmail</a>
-                    </li>
-                    <li>
-                        <a href="">blog</a>
-                    </li>
-                </ul>
-                <p className={styled.footerText}>
-                    <small>&copy; Copyright © All rights reserved</small>
-                </p>
+
             </div>
         </div>
     );

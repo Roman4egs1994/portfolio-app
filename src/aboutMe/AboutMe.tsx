@@ -5,7 +5,7 @@ import photoProfile from '../common/assets/photoProfile/Profile.jpg'
 import Title from "../common/componets/title/Title";
 import {Address} from "./adress/Address";
 import {ButtonLink} from "../common/componets/button/ButtonLink";
-import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetwork";
+import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
 
 
 export const AboutMe = () => {
@@ -32,7 +32,7 @@ export const AboutMe = () => {
                         <div className={styled.cvAndSocialNetworks}>
                             {/*<a className={styled.buttonGreen} href="" role={'button'}>Download CV</a>*/}
                             <ButtonLink title={'Download CV'}/>
-                            <IconSocialNetwork/>
+                            <IconSocialNetwork />
                         </div>
                     </div>
                 </div>

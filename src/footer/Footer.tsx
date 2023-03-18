@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from './footer.module.css'
+import styled from './footer.module.scss'
 import styleContainer from "../common/styles/Container.module.css";
 import {FooterElement} from "./footerElement/footerElement";
 
@@ -10,16 +10,32 @@ export const Footer = () => {
     return (
         <div className={styled.footerBlock}>
             <div className={footerContainer}>
-                {/*<h2 className={styled.title}>Roman Rybkin</h2>*/}
-                <div className={styled.footerElements}>
-                    <FooterElement/>
-                    <FooterElement/>
-                    <FooterElement/>
-                    <FooterElement/>
+                <div className={styled.hrFooter}></div>
+                <div className={styled.footerLogo}>
+                    <a href="">
+                        <img src="" alt="L O G O"/>
+                    </a>
                 </div>
-                <div className={styled.footerText}>
-                    <span>&copy; 2023 Все права защищены</span>
-                </div>
+                <ul className={styled.siteSocial}>
+                    <li>
+                        <a href="">telegram</a>
+                    </li>
+                    <li>
+                        <a href="">LinkedIn</a>
+                    </li>
+                    <li>
+                        <a href="">instagram</a>
+                    </li>
+                    <li>
+                        <a href="">gmail</a>
+                    </li>
+                    <li>
+                        <a href="">blog</a>
+                    </li>
+                </ul>
+                <p className={styled.footerText}>
+                    <small>&copy; Copyright © All rights reserved</small>
+                </p>
             </div>
         </div>
     );

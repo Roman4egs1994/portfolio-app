@@ -1,0 +1,20 @@
+.followSocialNetwork{
+  display: flex;
+  align-items: center;
+  padding-inline-start: 0;
+  &::before{
+    background-color: rgba(255,255,255,.25);
+    content: '';
+    height: 2px;
+    margin-right: 23px;
+    width: 60px;
+  }
+  li{
+    list-style: none;
+    padding-left: 0;
+    color: white;
+    margin-right: 5px;
+  }
+
+
+}

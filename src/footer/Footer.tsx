@@ -25,7 +25,7 @@ export const Footer = () => {
                             <a href="">LinkedIn</a>
                         </li>
                         <li>
-                            <a href="">Blog</a>
+                            <a href="">GitHub</a>
                         </li>
                         <li>
                             <a href="">gmail</a>

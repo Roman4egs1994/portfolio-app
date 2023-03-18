@@ -5,6 +5,7 @@ import photoProfile from '../common/assets/photoProfile/Profile.jpg'
 import Title from "../common/componets/title/Title";
 import {Address} from "./adress/Address";
 import {ButtonLink} from "../common/componets/button/ButtonLink";
+import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetwork";
 
 
 export const AboutMe = () => {
@@ -30,14 +31,8 @@ export const AboutMe = () => {
                         <Address/>
                         <div className={styled.cvAndSocialNetworks}>
                             {/*<a className={styled.buttonGreen} href="" role={'button'}>Download CV</a>*/}
-                           <ButtonLink title={'Download CV'}/>
-                            <ul className={styled.followSocialNetwork}>
-                                <li className={styled.item}>s</li>
-                                <li className={styled.item}>s</li>
-                                <li className={styled.item}>s</li>
-                                <li className={styled.item}>s</li>
-                                <li className={styled.item}>s</li>
-                            </ul>
+                            <ButtonLink title={'Download CV'}/>
+                            <IconSocialNetwork/>
                         </div>
                     </div>
                 </div>

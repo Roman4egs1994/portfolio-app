@@ -1,12 +1,16 @@
-import React from 'react';
+import React, {FunctionComponent, SVGProps} from 'react';
 import styled from './Skills.module.scss'
 import styleContainer from '../common/styles/Container.module.css'
 import {Skill} from "./skill/Skill";
 import {v1} from "uuid";
 import Title from "../common/componets/title/Title";
+import reactIcon  from '../common/assets/icon/reactIcon.png'
+import cssIcon  from '../common/assets/icon/cssIcon.png'
+import storyBookIcon  from '../common/assets/icon/storybookIcon.png'
+import typeScript  from '../common/assets/icon/typescriptIcon.png'
+import redux  from '../common/assets/icon/reduxIcon.png'
+import figma from '../common/assets/icon/figmaIcon.png'
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faReact } from '@fortawesome/free-brands-svg-icons'
 
 
 type SkillsType = {
@@ -17,42 +21,48 @@ type SkillsType = {
 }
 
 
+
+
 export const Skills = () => {
+
+
+
+
 
     const skills: SkillsType[] = [
         {
             id: v1(),
-            icon: `''`,
+            icon: reactIcon,
             title: "React",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: v1(),
-            icon: 'asdasd',
+            icon: typeScript,
             title: "TypeScript",
             description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
         },
         {
             id: v1(),
-            icon: 'asdasd',
-            title: "CSS",
+            icon: cssIcon,
+            title: "Design Trends",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: v1(),
-            icon: 'asdasd',
+            icon: figma,
             title: "Figma",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: v1(),
-            icon: 'asdasd',
+            icon: storyBookIcon,
             title: "Storybook",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         },
         {
             id: v1(),
-            icon: 'asdasd',
+            icon: redux,
             title: "Redux",
             description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
         }
@@ -64,11 +74,11 @@ export const Skills = () => {
 
     return (
         <div className={styled.skillsBlock}>
+
             <div className={divSkillsContainer}>
                 <Title description={'This is my skills'} title={"Skills"}/>
                 <div className={styled.skills}>
                     {mySkills}
-
                 </div>
             </div>
         </div>

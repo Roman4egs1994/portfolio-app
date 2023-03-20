@@ -4,9 +4,14 @@
     box-sizing: border-box;
 }
 
-/*:root {*/
-/*    --background-dark-theme: #111010;*/
-/*}*/
+.svg-icon {
+    fill: #000;
+    transition: fill 0.3s ease;
+}
+
+.svg-icon:hover {
+    fill: #f00;
+}
 
 ::selection {
     background-color: #009e66;

@@ -16,11 +16,15 @@
   }
 
   .icon {
-    color: $colorElementsDecoration;
-    height: 60px;
-    width: 60px;
-    margin-bottom: 22px;
+    display: flex;
+    width: 50px;
+    height: 50px;
+    .elementIcon{
+      width: 50px;
+      height: 50px;
+    }
   }
+
 
   .title {
     @include text(20px,1.2,500);

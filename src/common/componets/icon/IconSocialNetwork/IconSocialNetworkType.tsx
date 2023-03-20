@@ -1,4 +1,4 @@
-import React, {CSSProperties} from 'react';
+import React, {CSSProperties, ReactElement} from 'react';
 import styled from './IconSocialNetwork.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {
@@ -11,7 +11,11 @@ import {
     faEnvelopeSquare,
 } from '@fortawesome/free-solid-svg-icons'
 
-// import {ReactComponent as Telegram1} from '../../../../common/assets/icon/telegram.svg'
+
+type iconsItemType = {
+    link: string
+    icon: ReactElement<any, any>
+}
 
 type IconSocialNetworkType = {
     style?: any
@@ -36,7 +40,7 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
     const email = <FontAwesomeIcon style={styleIcon} icon={faEnvelopeSquare}/>
 
 
-    const iconsItem = [
+    const iconsItem:iconsItemType[] = [
         {link: '', icon: telegram},
         {link: '', icon: instagram},
         {link: '', icon: linkedinIn},
@@ -53,16 +57,12 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
                     iconsItem.map((icon) => {
                         return (
                             <li style={props.styleLi} className={styled.item}>
-                                <a href={icon.link}>{icon.icon}</a>
+                                <span> <a href={icon.link}>{icon.icon}</a></span>
                             </li>
                         )
                     })
                 }
             </ul>
-            <div className={styled.experiment}>
-
-
-            </div>
         </>
 
     );

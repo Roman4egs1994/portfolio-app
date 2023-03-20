@@ -8,7 +8,7 @@ import {
     faTelegram
 } from '@fortawesome/free-brands-svg-icons';
 import {
-    faEnvelopeSquare,
+    faEnvelopeSquare, faMobileAndroidAlt,
 } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -37,7 +37,7 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
     const instagram = <FontAwesomeIcon style={styleIcon} icon={faInstagram}/>
     const linkedinIn = <FontAwesomeIcon style={styleIcon} icon={faLinkedin}/>
     const gitHub = <FontAwesomeIcon style={styleIcon} icon={faGithub}/>
-    const email = <FontAwesomeIcon style={styleIcon} icon={faEnvelopeSquare}/>
+    const email = <FontAwesomeIcon style={styleIcon} icon={faMobileAndroidAlt}/>
 
 
     const iconsItem:iconsItemType[] = [

@@ -6,11 +6,15 @@
   padding-right: 15px;
   position: relative;
   width: 455px;
-
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 440px;
+  }
   .contactInfo {
     padding-left: 15px;
     width: 450px;
-
+    @media (min-width: 992px) and (max-width: 1200px) {
+      width: 400px;
+    }
 
     .title {
       @include text(1.5rem, 1.5, 500);
@@ -23,7 +27,10 @@
       margin-bottom: 23px;
       margin-top: 0;
       display: block;
-      @include text(15px, 1.95, 400)
+      @include text(15px, 1.95, 400);
+      @media (min-width: 992px) and (max-width: 1200px) {
+        font-size: 14px;
+      }
     }
 
   }

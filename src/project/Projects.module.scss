@@ -13,9 +13,9 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      @media screen and (max-width: 1200px) {
-        justify-content: center;
-      }
+      //@media (min-width: 992px) and (max-width: 1199.98px) {
+      //  width: 1000px;
+      //}
     }
 
   }

@@ -1,28 +1,19 @@
 import React from 'react';
 import styled from "./ListInfo.module.scss";
-import {faTelegram} from "@fortawesome/free-brands-svg-icons";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {
-    faAutomobile, faBath, faBathtub, faCommentSms,
-    faEnvelopeSquare, faHotTubPerson, faHouseSignal,
+     faCommentSms,
+    faEnvelopeSquare,
     faLocation,
-    faLocationPin, faMailBulk, faMailForward, faMailReply, faMailReplyAll,
-    faMapLocationDot, faMobile, faMobileAndroid, faMobileAndroidAlt,
-    faMobileButton, faMobilePhone, faMobileRetro,
-    faMobileScreen,
-    faPencil,
-    faPencilAlt,
     faPenToSquare,
-    faPersonCircleCheck,
-    faRoadCircleExclamation, faSignal, faSignal5, faSignalPerfect, faSms, faVoicemail,
-    faXmarkCircle
+
 } from "@fortawesome/free-solid-svg-icons";
 
 export const ListInfo = () => {
 
     const styleIcon = {
         color: '#009e66',
-        fontSize: '40px',
+        fontSize: '35px',
         lineHeight: '100%',
         marginRight: '15px',
         cursor: 'pointer',
@@ -32,7 +23,7 @@ export const ListInfo = () => {
     const location = <FontAwesomeIcon style={styleIcon} icon={faLocation}/>
     const email = <FontAwesomeIcon style={styleIcon} icon={faPenToSquare}/>
     const mobileNumber = <FontAwesomeIcon style={styleIcon} icon={faCommentSms}/>
-    const mail = <FontAwesomeIcon style={styleIcon} icon={faMailForward}/>
+    const mail = <FontAwesomeIcon style={styleIcon} icon={faEnvelopeSquare}/>
     return (
         <>
             <ul className={styled.listInfo}>

@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './AboutMe.module.scss'
-import styleContainer from './../common/styles/Container.module.css'
+import styleContainer from '../common/styles/Container.module.scss'
 import photoProfile from '../common/assets/photoProfile/Profile.jpg'
 import Title from "../common/componets/title/Title";
 import {Address} from "./adress/Address";

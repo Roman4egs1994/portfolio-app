@@ -1,0 +1,24 @@
+.container {
+    /*border: 1px solid;*/
+    min-height: 100%;
+    width: 62%;
+    max-width: 1900px;
+    margin: 0 auto;
+    display: flex;
+    flex-shrink: 1;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 75px 0  65px 0;
+
+    @media screen and (max-width: 1887px) {
+        width: 63%;
+        min-width: 1200px;
+    }
+    @media screen and (max-width: 1200px) {
+        width: 85%;
+        min-width: 990px;
+    }
+}
+
+

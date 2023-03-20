@@ -37,7 +37,7 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
     const instagram = <FontAwesomeIcon style={styleIcon} icon={faInstagram}/>
     const linkedinIn = <FontAwesomeIcon style={styleIcon} icon={faLinkedin}/>
     const gitHub = <FontAwesomeIcon style={styleIcon} icon={faGithub}/>
-    const email = <FontAwesomeIcon style={styleIcon} icon={faMobileAndroidAlt}/>
+    const email = <FontAwesomeIcon style={styleIcon} icon={faEnvelopeSquare}/>
 
 
     const iconsItem:iconsItemType[] = [

@@ -3,11 +3,9 @@
 
 .profileInfo {
   font-size: 15px;
-  //margin-bottom: 0;
   padding: 29px 0;
-  //padding-bottom: 100px;
   font-style: normal;
-  //line-height: inherit;
+
 
   .row {
     display: flex;
@@ -17,7 +15,9 @@
       position: relative;
       width: 100%;
       margin: 0 0 10px;
-
+      @media (min-width: 992px) and (max-width: 1200px) {
+        font-size: 14px;
+      }
 
       span {
         color: #DADADA;
@@ -36,6 +36,7 @@
         font-family: Poppins, sans-serif;
         font-weight: 400;
         color: $textColorTitleDescription;
+
       }
 
       a {

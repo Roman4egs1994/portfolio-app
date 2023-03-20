@@ -7,7 +7,9 @@
   position: relative;
   width: 670px;
   color: #9f9f9f;
-
+  @media (min-width: 992px) and (max-width: 1200px) {
+    width: 550px;
+  }
 
   .contactForm {
     display: block;

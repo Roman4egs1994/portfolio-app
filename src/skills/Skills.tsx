@@ -1,6 +1,6 @@
 import React, {FunctionComponent, SVGProps} from 'react';
 import styled from './Skills.module.scss'
-import styleContainer from '../common/styles/Container.module.css'
+import styleContainer from '../common/styles/Container.module.scss'
 import {Skill} from "./skill/Skill";
 import {v1} from "uuid";
 import Title from "../common/componets/title/Title";
@@ -12,7 +12,6 @@ import redux  from '../common/assets/icon/reduxIcon.png'
 import figma from '../common/assets/icon/figmaIcon.png'
 
 
-
 type SkillsType = {
     icon: string
     id: string
@@ -20,14 +19,7 @@ type SkillsType = {
     description: string
 }
 
-
-
-
 export const Skills = () => {
-
-
-
-
 
     const skills: SkillsType[] = [
         {

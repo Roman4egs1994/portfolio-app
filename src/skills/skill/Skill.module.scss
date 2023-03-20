@@ -11,6 +11,10 @@
   margin-bottom: 30px;
   padding: 38px 42px;
   transition: all .1s ease-in-out;
+  @media (min-width: 992px) and (max-width: 1200px) {
+    flex: 0 0 31.33333%;
+    width: 31.33333%;
+  }
   &:hover{
     border-bottom-color: $colorElementsDecoration
   }

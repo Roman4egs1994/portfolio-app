@@ -1,4 +1,4 @@
-import React, {FunctionComponent, SVGProps} from 'react';
+import React from 'react';
 import styled from './Skill.module.scss'
 
 

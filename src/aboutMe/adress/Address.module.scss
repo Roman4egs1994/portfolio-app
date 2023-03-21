@@ -5,20 +5,23 @@
   font-size: 15px;
   padding: 29px 0;
   font-style: normal;
-
+  @media (min-width: 768px) and (max-width: 991.80px) {
+    //margin: 0 100px 0 100px;
+    text-align: center;
+  }
 
   .row {
     display: flex;
     margin-bottom: 0;
 
     .rowSingleInfo {
-      position: relative;
+      //position: relative;
       width: 100%;
       margin: 0 0 10px;
       @media (min-width: 992px) and (max-width: 1200px) {
         font-size: 14px;
+        width: 100px;
       }
-
       span {
         color: #DADADA;
         margin-right: 10px;

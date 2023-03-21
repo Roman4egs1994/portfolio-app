@@ -30,8 +30,12 @@
           width: 450px;
         }
         @media (max-width: 991.98px){
-          flex: 0 0 100%;
-          max-width: 100%;
+          padding: 15px 15px 15px 15px;
+        }
+        @media (min-width: 768px) and (max-width: 991.80px) {
+          //flex: 0 0 100%;
+          //max-width: 100%;
+          //text-align: center;
         }
         img {
           width: 430px;
@@ -55,7 +59,7 @@
       .profile {
         max-width: 670px;
         @media (min-width: 992px) and (max-width: 1200px) {
-          max-width: 540px;
+          max-width: 530px;
         }
         h2 {
           @include text(24px,1.2,500);
@@ -94,6 +98,9 @@
         .cvAndSocialNetworks{
           display: flex;
           align-items: center;
+          @media (min-width: 768px) and (max-width: 991.80px) {
+            justify-content: center;
+          }
         }
       }
     }

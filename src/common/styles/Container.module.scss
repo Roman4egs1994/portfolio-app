@@ -27,6 +27,10 @@
         width: 100%;
         min-width: 576px;
     }
+    @media screen and (max-width: 575.80px) {
+        width: 94%;
+        min-width: 0;
+    }
 }
 
 

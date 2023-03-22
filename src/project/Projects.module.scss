@@ -13,8 +13,12 @@
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      @media (min-width: 0px) and (max-width: 991.80px) {
+      @media (min-width: 576px) and (max-width: 991.80px) {
         justify-content: center;
+      }
+      @media (max-width: 575.80px) {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, 50%);
       }
     }
 

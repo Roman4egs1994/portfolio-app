@@ -69,6 +69,10 @@
           max-width: 530px;
           padding-left: 12px;
         }
+        @media (min-width: 320px) and (max-width: 575.80px) {
+          max-width: 530px;
+        }
+
 
         h2 {
           @include text(24px, 1.2, 500);
@@ -91,7 +95,10 @@
           }
           @media (min-width: 576px) and (max-width: 991.80px) {
             font-size: 26px;
-            //letter-spacing: px;
+
+          }
+          @media (max-width: 575.80px) {
+            font-size: 22px;
           }
         }
 
@@ -112,10 +119,21 @@
 
         .cvAndSocialNetworks {
           display: flex;
+          flex-wrap: wrap;
           align-items: center;
           @media (min-width: 768px) and (max-width: 991.80px) {
             justify-content: center;
           }
+          @media (max-width: 393.80px) {
+            justify-content: center;
+          }
+          .btn {
+            @media (max-width: 393.80px) {
+              margin-bottom: 15px;
+
+            }
+          }
+
         }
       }
     }

@@ -23,6 +23,15 @@
     padding: 38px 42px;
     min-width: 546px;
   }
+  @media (max-width: 575.80px) {
+    //width: 300px;
+    //padding: 38px 42px;
+    width: 95%;
+    //height: auto;
+  }
+  @media (max-width: 385px) {
+
+  }
   &:hover{
     border-bottom-color: $colorElementsDecoration
   }

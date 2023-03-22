@@ -11,16 +11,15 @@
     width: 550px;
   }
   @media (min-width: 576px) and (max-width: 767.80px) {
-    //padding: 38px 42px;
     max-width: 546px;
-    //margin-bottom: 35px;
+  }
+  @media (max-width: 575.80px) {
+    width: 95%;
   }
 
   .contactForm {
     display: block;
     margin-top: 0;
-
-
 
     .title {
       @include text(1.5rem, 1.5, 500);
@@ -42,7 +41,7 @@
         padding-right: 15px;
         position: relative;
         margin-bottom: 25px;
-        @media (min-width: 576px) and (max-width: 767.80px) {
+        @media (max-width: 767.80px) {
           width: 100%
         }
 
@@ -61,9 +60,7 @@
           font-weight: 400;
           line-height: 1.95;
           text-align: left;
-          @media (min-width: 576px) and (max-width: 767.80px) {
-            //padding: 38px 42px;
-            //min-width: 546px;
+          @media (max-width: 767.80px) {
             margin-bottom: 12px;
           }
 
@@ -101,9 +98,7 @@
           font-weight: 400;
           line-height: 1.95;
           text-align: left;
-          @media (min-width: 576px) and (max-width: 767.80px) {
-            //padding: 38px 42px;
-            //max-width: 546px;
+          @media (max-width: 767.80px) {
             margin-bottom: 12px;
           }
           &:focus{
@@ -136,9 +131,7 @@
           font-weight: 400;
           line-height: 1.95;
           text-align: left;
-          @media (min-width: 576px) and (max-width: 767.80px) {
-            //padding: 38px 42px;
-            //min-width: 546px;
+          @media (max-width: 767.80px) {
             margin-bottom: 12px;
           }
           &:focus{
@@ -154,7 +147,7 @@
         padding-right: 15px;
         position: relative;
         width: 100%;
-        @media (min-width: 576px) and (max-width: 767.80px) {
+        @media (max-width: 767.80px) {
           margin-bottom: 10px;
         }
       }

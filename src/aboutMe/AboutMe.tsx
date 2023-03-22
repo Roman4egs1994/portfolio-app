@@ -31,8 +31,10 @@ export const AboutMe = () => {
                         <Address/>
                         <div className={styled.cvAndSocialNetworks}>
                             {/*<a className={styled.buttonGreen} href="" role={'button'}>Download CV</a>*/}
-                            <ButtonLink title={'Download CV'}/>
-                            <IconSocialNetwork />
+                            <div className={styled.btn}>
+                                <ButtonLink title={'Download CV'}/>
+                            </div>
+                            <IconSocialNetwork/>
                         </div>
                     </div>
                 </div>

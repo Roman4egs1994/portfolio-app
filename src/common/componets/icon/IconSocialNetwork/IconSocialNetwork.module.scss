@@ -19,13 +19,15 @@
     height: 2px;
     margin-right: 23px;
     width: 60px;
+    @media (max-width: 483px) {
+      display: none;
+    }
   }
 
   li {
     list-style: none;
     padding-left: 0;
     color: white;
-
   }
 
 

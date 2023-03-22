@@ -65,7 +65,9 @@
       }
 
       .fixedBlock {
-
+        @media (min-width: 0px) and (max-width: 767.80px) {
+          display: none;
+        }
 
       }
 

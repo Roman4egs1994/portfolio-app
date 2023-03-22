@@ -16,6 +16,9 @@
     margin: 0 0 37px;
     display: inline-block;
     letter-spacing: -.25px;
+    @media (max-width: 767.80px) {
+      font-size: 36px;
+    }
   }
 }
 

@@ -19,6 +19,10 @@
     margin: 10px;
     width: 354px;
   }
+  @media (min-width: 576px) and (max-width: 767.80px) {
+    padding: 38px 42px;
+    min-width: 546px;
+  }
   &:hover{
     border-bottom-color: $colorElementsDecoration
   }

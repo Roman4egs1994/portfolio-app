@@ -67,6 +67,10 @@
               padding-left: 18px;
               padding-right: 18px;
             }
+            @media (min-width: 576px) and (max-width: 767.80px) {
+              padding-left: 10px;
+              padding-right: 10px;
+            }
           }
         }
       }

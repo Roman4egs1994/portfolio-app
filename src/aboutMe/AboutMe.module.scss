@@ -29,14 +29,10 @@
         @media (min-width: 992px) and (max-width: 1200px) {
           width: 450px;
         }
-        @media (max-width: 991.98px){
+        @media (max-width: 991.98px) {
           padding: 15px 15px 15px 15px;
         }
-        @media (min-width: 768px) and (max-width: 991.80px) {
-          //flex: 0 0 100%;
-          //max-width: 100%;
-          //text-align: center;
-        }
+
         img {
           width: 430px;
           height: auto;
@@ -45,13 +41,21 @@
             width: 430px;
             object-fit: cover;
           }
-          @media (max-width: 991.98px){
+          @media (max-width: 991.98px) {
             border-radius: 50%;
-            display:  block;
+            display: block;
             height: 250px;
             margin: 0 auto 40px auto;
             object-fit: cover;
             width: 250px;
+          }
+          @media (max-width: 767.80px) {
+            border-radius: 50%;
+            display: block;
+            height: 200px;
+            margin: 0 auto 40px auto;
+            object-fit: cover;
+            width: 200px;
           }
         }
       }
@@ -61,8 +65,13 @@
         @media (min-width: 992px) and (max-width: 1200px) {
           max-width: 530px;
         }
+        @media (min-width: 576px) and (max-width: 767.80px) {
+          max-width: 530px;
+          padding-left: 12px;
+        }
+
         h2 {
-          @include text(24px,1.2,500);
+          @include text(24px, 1.2, 500);
           color: $colorElementsDecoration;
           margin: 0 0 15px;
           @media (min-width: 992px) and (max-width: 1200px) {
@@ -72,30 +81,36 @@
             font-size: 18px;
           }
         }
+
         h6 {
-          @include text(31px,1.6,700);
-          color:$textColorTitle;
+          @include text(31px, 1.6, 700);
+          color: $textColorTitle;
           margin: 0 0 16px;
           @media (min-width: 992px) and (max-width: 1200px) {
             font-size: 26px;
           }
-          @media (min-width: 0px) and (max-width: 991.80px) {
+          @media (min-width: 576px) and (max-width: 991.80px) {
             font-size: 26px;
+            //letter-spacing: px;
           }
         }
-       .text {
-         @include text(15,1.95,400);
-         border-bottom: 2px solid rgba(255,255,255,.08);
-         margin-bottom: 0;
-         padding: 0 0 29px;
-         word-wrap: break-word;
-         @media (min-width: 992px) and (max-width: 1200px) {
-           padding: 0 0 20px;
-           font-size: 14px;
-         }
-       }
 
-        .cvAndSocialNetworks{
+        .text {
+          @include text(15, 1.95, 400);
+          border-bottom: 2px solid rgba(255, 255, 255, .08);
+          margin-bottom: 0;
+          padding: 0 0 29px;
+          word-wrap: break-word;
+          @media (min-width: 576px) and (max-width: 1200px) {
+            padding: 0 0 20px;
+            font-size: 14px;
+          }
+          @media (max-width: 767.80px) {
+            font-size: 14px;
+          }
+        }
+
+        .cvAndSocialNetworks {
           display: flex;
           align-items: center;
           @media (min-width: 768px) and (max-width: 991.80px) {

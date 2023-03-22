@@ -4,31 +4,21 @@
 .contact {
   padding-left: 15px;
   padding-right: 15px;
-  position: relative;
   width: 455px;
   @media (min-width: 992px) and (max-width: 1200px) {
-    width: 440px;
+    width: 44%;
   }
-  //@media (min-width: 992px) and (max-width: 1200px) {
-  //  width: 455px;
-  //}
-
   @media (min-width: 768px) and (max-width: 991.80px) {
-    display: flex;
-    justify-content: left;
+    width: 650px;
+  }
+  @media (min-width: 576px) and (max-width: 767.80px) {
+    width: 475px;
+  }
+  @media (max-width: 576px) {
+    width: 100%;
   }
   .contactInfo {
     padding-left: 15px;
-    width: 450px;
-    @media (min-width: 992px) and (max-width: 1200px) {
-      width: 400px;
-    }
-    @media (min-width: 320px) and (max-width: 575.80px) {
-      //min-width: 100%;
-      //display: flex;
-      margin: 0 auto;
-
-    }
 
     .title {
       @include text(1.5rem, 1.5, 500);
@@ -40,19 +30,10 @@
     .description {
       margin-bottom: 23px;
       margin-top: 0;
-      display: block;
       @include text(15px, 1.95, 400);
-      @media (min-width: 992px) and (max-width: 1200px) {
+      @media (max-width: 1200px) {
         font-size: 14px;
       }
-      @media (min-width: 768px) and (max-width: 991.80px) {
-        font-size: 14px;
-        width: 900px;
-      }
-      @media (min-width: 576px) and (max-width: 767.80px) {
-        font-size: 14px;
-      }
-
 
     }
 

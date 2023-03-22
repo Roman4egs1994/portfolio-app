@@ -11,6 +11,9 @@
     margin-inline-start: 0;
     margin-inline-end: 0;
     padding-inline-start: 40px;
+    @media (max-width: 767.80px) {
+        display: none;
+    }
 
     .navItem{
         list-style: none;

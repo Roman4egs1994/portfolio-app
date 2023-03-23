@@ -4,6 +4,7 @@ import {AppRootStore} from "../../../store/reduxStore";
 import {onOffCollapsedAC} from "../../../store/reducers/app-reducer";
 import {Nav} from "../../../nav/Nav";
 import styled from './BurgerMenu.module.scss'
+import {useAutoAnimate} from "@formkit/auto-animate/react";
 
 export const BurgerMenu = () => {
 
@@ -19,7 +20,7 @@ export const BurgerMenu = () => {
         fontSize: '10px',
         flexDirection: 'column'
     }
-
+    const [listRef] = useAutoAnimate()
     return (
 
         <>
@@ -28,8 +29,8 @@ export const BurgerMenu = () => {
                 <span className={styled.line}></span></span>
             </div>
 
-            <div className={collapsed ? styled.navBarMenuOpen : ''}>
-                {collapsed  && <Nav style={styleNav}/>}
+            <div className={collapsed ? styled.navBarMenuOpen : ''} ref={listRef} >
+                {collapsed  && <Nav style={styleNav} />}
             </div>
 
         </>

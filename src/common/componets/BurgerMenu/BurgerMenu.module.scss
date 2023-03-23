@@ -2,7 +2,7 @@
 .navBarMenu{
 
   display: flex;
-  right: 50px;
+  right: 40px;
   flex-direction: column;
   height: 19px;
   justify-content: space-between;
@@ -34,18 +34,15 @@
   }
 
 }
-
-
 .navBarMenuOpen{
   background-color: #191919;
   position: fixed;
   top: 80px;
-  right: 50px;
+  right: 40px;
   width: 180px;
   height: 200px;
   margin: 0;
   display: flex;
-
 
   @media (min-width: 768px) and (max-width: 10000px) {
     display: none;

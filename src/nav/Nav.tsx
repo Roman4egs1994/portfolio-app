@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from './Nav.module.scss'
-import {useSelector} from "react-redux";
-import {AppRootStore} from "../store/reduxStore";
+
+type NavPropsType = {
+    style?: object
+}
+
+export const Nav = (props: NavPropsType) => {
 
 
-export const Nav = () => {
-    const collapsed = useSelector<AppRootStore, boolean>((state) => state.appReducer.collapsed)
 
     return (
-        <ul className={styled.navbar}>
-            <li className={styled.navItem}>
+        <ul className={styled.navbar} style={props.style}>
+            <li className={styled.navItem} >
                 <a className={styled.navLink} href="">About</a>
             </li>
             <li className={styled.navItem}>

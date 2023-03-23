@@ -33,20 +33,20 @@
 
   }
 
-
 }
 
 
 .navBarMenuOpen{
   background-color: #191919;
-  display: flex;
   position: fixed;
   top: 80px;
   right: 50px;
-  width: 200px;
-  height: 250px;
-  padding: 8px 20px;
-  //z-index: 2;
+  width: 180px;
+  height: 200px;
+  margin: 0;
+  display: flex;
+
+
   @media (min-width: 768px) and (max-width: 10000px) {
     display: none;
   }

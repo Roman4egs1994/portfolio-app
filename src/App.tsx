@@ -7,6 +7,7 @@ import {Projects} from "./project/Projects";
 import {Contacts} from "./сontacts/Contacts";
 import {Footer} from "./footer/Footer";
 import {Main} from "./main/Main";
+import {BurgerMenu} from "./common/componets/BurgerMenu/BurgerMenu";
 
 
 
@@ -20,6 +21,9 @@ function App() {
             <Projects/>
             <Contacts/>
             <Footer/>
+            <div style={{width: '100%',height:'500px', backgroundColor: 'blue'}}>
+                <BurgerMenu/>
+            </div>
         </div>
     );
 }

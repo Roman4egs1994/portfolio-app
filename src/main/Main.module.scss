@@ -34,7 +34,6 @@
         font-family: Poppins, sans-serif;
 
         .name {
-
           color: #fff;
           font-size: 70px;
           font-weight: 700;
@@ -42,6 +41,9 @@
           margin-bottom: 34px;
           line-height: 1.2;
           margin-top: 0;
+          @media (min-width: 576px) and (max-width: 991.80px) {
+            font-size: 62px ;
+          }
         }
 
         .headLine {
@@ -52,7 +54,9 @@
           //margin-bottom: 0
           margin: 0;
           padding: 0;
-
+          @media (min-width: 576px) and (max-width: 991.80px) {
+            font-size: 30px ;
+          }
           .singleHeadLine {
             display: inline-block;
             position: relative;

@@ -1,0 +1,54 @@
+
+.navBarMenu{
+
+  display: flex;
+  right: 50px;
+  flex-direction: column;
+  height: 19px;
+  justify-content: space-between;
+  position: fixed;
+  width: 30px;
+  flex-wrap: nowrap;
+  align-items: flex-end;
+  &:before{
+    background-color: #f3f3f3;
+    content: '';
+    width: 85%;
+    height: 3px;
+    cursor: pointer;
+  }
+  &:after{
+    background-color: #f3f3f3;
+    content: '';
+    width: 100%;
+    height: 3px;
+    cursor: pointer;
+  }
+
+  .line{
+    background-color: #f3f3f3;
+    width: 63%;
+    height: 3px;
+    cursor: pointer;
+
+  }
+
+
+}
+
+
+.navBarMenuOpen{
+  background-color: #191919;
+  display: flex;
+  position: fixed;
+  top: 80px;
+  right: 50px;
+  width: 200px;
+  height: 250px;
+  padding: 8px 20px;
+  //z-index: 2;
+  @media (min-width: 768px) and (max-width: 10000px) {
+    display: none;
+  }
+}
+

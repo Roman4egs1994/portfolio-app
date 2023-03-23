@@ -13,6 +13,19 @@
     top: 0;
     z-index: 1030;
 
+    .displayNoneNavigate {
+        @media  (max-width: 767.80px) {
+            display: none;
+        }
+    }
+    .displayActiveNavigate {
+        @media (min-width: 768px) and (max-width: 10000px) {
+            display: none;
+        }
+        @media  (max-width: 767.80px) {
+            display: inline-block;
+        }
+    }
     .navBarBrand {
         display: inline-block;
         font-size: 1.25rem;

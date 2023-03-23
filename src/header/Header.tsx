@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from './Header.module.scss'
 import {Nav} from "../nav/Nav";
+import {BurgerMenu} from "../common/componets/BurgerMenu/BurgerMenu";
 
 
 export const Header = () => {
@@ -9,7 +10,12 @@ export const Header = () => {
             <a className={styled.navBarBrand} href="">
                 <img src="" alt="logo"/>
             </a>
-            <Nav/>
+            <div className={styled.displayNoneNavigate}>
+                <Nav/>
+            </div>
+            <div className={styled.displayActiveNavigate}>
+                <BurgerMenu/>
+            </div>
         </nav>
     );
 };

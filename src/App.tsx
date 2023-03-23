@@ -7,7 +7,7 @@ import {Projects} from "./project/Projects";
 import {Contacts} from "./сontacts/Contacts";
 import {Footer} from "./footer/Footer";
 import {Main} from "./main/Main";
-import {BurgerMenu} from "./common/componets/BurgerMenu/BurgerMenu";
+
 
 
 

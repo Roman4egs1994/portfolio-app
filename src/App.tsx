@@ -21,9 +21,6 @@ function App() {
             <Projects/>
             <Contacts/>
             <Footer/>
-            <div style={{width: '100%',height:'500px', backgroundColor: 'blue'}}>
-                <BurgerMenu/>
-            </div>
         </div>
     );
 }

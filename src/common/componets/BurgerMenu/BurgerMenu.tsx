@@ -20,7 +20,7 @@ export const BurgerMenu = () => {
         fontSize: '10px',
         flexDirection: 'column'
     }
-    const [listRef] = useAutoAnimate()
+
     return (
 
         <>
@@ -29,7 +29,7 @@ export const BurgerMenu = () => {
                 <span className={styled.line}></span></span>
             </div>
 
-            <div className={collapsed ? styled.navBarMenuOpen : ''} ref={listRef} >
+            <div className={collapsed ? styled.navBarMenuOpen : ''}>
                 {collapsed  && <Nav style={styleNav} />}
             </div>
 

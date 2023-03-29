@@ -13,28 +13,32 @@ export const Form = () => {
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                type="email"
+                                type="text"
                                 placeholder="Name"
+                                required={true}
                             />
                         </div>
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                type="email"
+                                type="Email"
                                 placeholder="Email"
+                                required={true}
                             />
                         </div>
                         <div className={styled.formGroupStandard}>
                             <input
                                 className={styled.formControlStandard}
-                                type="email"
+                                type="text"
                                 placeholder="Subject"
+                                required={true}
                             />
                         </div>
                         <div className={styled.formMessage}>
                             <textarea
                                 name="message"
                                 placeholder="Message"
+                                required={true}
                             />
                         </div>
                         <div className={styled.submit}>

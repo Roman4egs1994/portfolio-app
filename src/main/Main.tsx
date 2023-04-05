@@ -36,7 +36,13 @@ export const Main = () => {
                         <h4 className={style.headLine}>
                             I’m a
                             <span className={style.singleHeadLine}>
-                                <ReactTypingEffectText  text={textTyping}/>
+                                <ReactTypingEffectText
+                                    text={textTyping}
+                                    speed={200}
+                                    eraseSpeed={200}
+                                    eraseDelay={5000}
+                                    typingDelay={500}
+                                />
                             </span>
                         </h4>
                     </div>

@@ -1,8 +1,8 @@
 import React from 'react';
 import style from './Main.module.scss'
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
-
-
+import ReactTypingEffect from "react-typing-effect";
+import {ReactTypingEffectText} from "../common/componets/typingText/ReactTypingEffect";
 
 
 
@@ -21,24 +21,11 @@ export const Main = () => {
         paddingBottom: '10px'
     }
 
-    const particlesOpt = {
-        'particles':{
-            "number": {
-                "value": 150,
-                "density":{
-                    "enable": true,
-                    "value_area": 800
-                }
-            }
-        }
-    }
+    const textTyping = ["React developer.", "Frontend developer."]
 
     return (
         <div className={style.main}>
-            {/*<Particle/>*/}
             <div className={style.container}>
-                {/* eslint-disable-next-line react/jsx-no-undef */}
-                {/*<Particles className={style.particle}  params={particlesOpt}/>*/}
                 <div className={style.containerCenter}>
 
 
@@ -49,7 +36,7 @@ export const Main = () => {
                         <h4 className={style.headLine}>
                             I’m a
                             <span className={style.singleHeadLine}>
-
+                                <ReactTypingEffectText  text={textTyping}/>
                             </span>
                         </h4>
                     </div>

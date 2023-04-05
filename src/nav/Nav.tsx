@@ -39,9 +39,9 @@ export const Nav = (props: NavPropsType) => {
                       spy={true}
                       smooth={true}
                       hashSpy={true}
-                      offset={50}
+                      offset={1}
                       duration={500}
-                      delay={1000}
+                      delay={200}
                       isDynamic={true}
                 >
                     Skills
@@ -55,9 +55,9 @@ export const Nav = (props: NavPropsType) => {
                       spy={true}
                       smooth={true}
                       hashSpy={true}
-                      offset={50}
+                      offset={1}
                       duration={500}
-                      delay={1000}
+                      delay={200}
                       isDynamic={true}
                 >
                     Project
@@ -71,9 +71,9 @@ export const Nav = (props: NavPropsType) => {
                       spy={true}
                       smooth={true}
                       hashSpy={true}
-                      offset={50}
+                      offset={1}
                       duration={500}
-                      delay={1000}
+                      delay={200}
                       isDynamic={true}
                 >
                     Contacts

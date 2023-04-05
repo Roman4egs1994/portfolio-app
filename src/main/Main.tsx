@@ -1,8 +1,8 @@
-import React from 'react';
+
 import style from './Main.module.scss'
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
-import ReactTypingEffect from "react-typing-effect";
 import {ReactTypingEffectText} from "../common/componets/typingText/ReactTypingEffect";
+import React from 'react'
 
 
 
@@ -27,8 +27,6 @@ export const Main = () => {
         <div className={style.main}>
             <div className={style.container}>
                 <div className={style.containerCenter}>
-
-
                     <div className={style.textCenter}>
                         <h1 className={style.name}>
                             Roman Rybkin

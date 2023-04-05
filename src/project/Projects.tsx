@@ -19,7 +19,7 @@ export const Projects = () => {
     const stateProject = [
         {
             id: v1(),
-            image: imageProject1 ,
+            image: imageProject1,
             title: "Social Network",
             description: "Социальная сеть Социальная сеть Социальная сеть Социальная сеть Социальная сеть ",
             headerProject: 'Описание',
@@ -64,7 +64,6 @@ export const Projects = () => {
     ]
 
 
-
     const mappedProject = stateProject.map(el => <Project
         key={el.id}
         title={el.title}
@@ -91,10 +90,10 @@ export const Projects = () => {
         <motion.div className={styled.projectsBlock}
                     initial="offscreen"
                     whileInView="onscreen"
-                    viewport={{ once: true, amount: 0.35 }}
+                    viewport={{once: true, amount: 0.35}}
         >
             <motion.div className={projectsContainer}
-                 variants={cardVariants}
+                        variants={cardVariants}
             >
                 <Title title={'Projects'} description={'Showcasing some of my best work'}/>
                 <div className={styled.projects}>

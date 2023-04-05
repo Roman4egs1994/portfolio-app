@@ -33,8 +33,8 @@ const Title:React.FC<TitlePropsType> = (props) => {
             rotate: 0,
             transition: {
                 type: "just",
-                bounce: 0.2,
-                duration: 0.8
+                bounce: 0.5,
+                duration: 1
             }
         }
     };
@@ -46,6 +46,7 @@ const Title:React.FC<TitlePropsType> = (props) => {
                     whileInView="onscreen"
                     viewport={{ once: true, amount: 0.1 }}
                     variants={cardVariants}
+                    style={{overflow: 'hidden'}}
                 >
                     <p>{description}</p>
                     <h2>{title}</h2>

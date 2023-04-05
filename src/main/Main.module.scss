@@ -50,8 +50,14 @@
           margin-bottom: 34px;
           line-height: 1.2;
           margin-top: 0;
-          @media (min-width: 576px) and (max-width: 991.80px) {
+          @media (min-width: 605px) and (max-width: 991.80px) {
             font-size: 62px ;
+          }
+          @media (min-width: 516px) and (max-width: 604.80px) {
+            font-size: 50px ;
+          }
+          @media (min-width: 0px) and (max-width: 515.80px) {
+            font-size: 36px ;
           }
         }
 
@@ -67,8 +73,14 @@
               margin-left: 3px;
             }
           }
-          @media (min-width: 576px) and (max-width: 991.80px) {
+          @media (min-width: 605px) and (max-width: 991.80px) {
             font-size: 30px ;
+          }
+          @media (min-width: 516px) and  (max-width: 604.80px) {
+            font-size: 24px ;
+          }
+          @media (min-width: 0px) and (max-width: 515.80px) {
+            font-size: 18px ;
           }
           .singleHeadLine {
             display: inline-block;

@@ -4,7 +4,7 @@ import styleContainer from '../common/styles/Container.module.scss'
 import {Form} from "./form/Form";
 import Title from "../common/componets/title/Title";
 import {ContactInfo} from "./ContactInfo/ContactInfo";
-import {motion, useMotionValueEvent, useScroll, Variants} from "framer-motion";
+import {motion} from "framer-motion";
 
 export const Contacts = () => {
 

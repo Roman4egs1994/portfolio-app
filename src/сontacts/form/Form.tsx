@@ -1,9 +1,10 @@
-import React from 'react';
+import React, {RefObject} from 'react';
 import styled from './Form.module.scss'
 import {ButtonLink} from "../../common/componets/button/ButtonLink";
+import {motion} from "framer-motion";
 
 
-export const Form = () => {
+export const Form =() => {
     return (
         <>
             <div className={styled.formBlock}>

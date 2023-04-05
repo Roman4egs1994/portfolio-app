@@ -5,42 +5,46 @@ import {Form} from "./form/Form";
 import Title from "../common/componets/title/Title";
 import {ContactInfo} from "./ContactInfo/ContactInfo";
 import {motion, useMotionValueEvent, useScroll, Variants} from "framer-motion";
+
 export const Contacts = () => {
 
     const contactsContainer = styleContainer.container + " " + styled.contactsContainer
 
 
-    const cardVariants: Variants = {
-        offscreen: {
-            y: 300
+    const animationBlockDescription = {
+        hidden: {
+            x: 0,
+            y: 200,
+            opacity: 0
         },
-        onscreen: (custom: number) => ({
+        visible: (custom: number) => ({
+            x: 0,
             y: 0,
-            rotate: 0,
-            transition: {
-                type: "just",
-                bounce: 0.5,
-                duration: 1
-            }
+            opacity: 1,
+            transition: {delay: custom * 0.2, duration: 0.7}
         })
-    };
+    }
 
     return (
         <motion.div
             className={styled.contactsBlock}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.35 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{amount: 0.2, once: true}}
+            style={{overflow: 'hidden'}}
+            id={'contact'}
         >
             <motion.div
                 className={contactsContainer}
-                variants={cardVariants}
+                variants={animationBlockDescription}
             >
                 <Title title={'Get in Touch'} description={'Feel free to contact me anytimes'}/>
-                <div className={styled.forms}>
+                <motion.div className={styled.forms}
+                            variants={animationBlockDescription}
+                >
                     <Form/>
                     <ContactInfo/>
-                </div>
+                </motion.div>
             </motion.div>
         </motion.div>
     );

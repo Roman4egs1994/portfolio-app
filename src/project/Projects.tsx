@@ -72,28 +72,46 @@ export const Projects = () => {
         href={el.href}
     />)
 
-    const cardVariants: Variants = {
-        offscreen: {
-            y: 300
+    // const cardVariants: Variants = {
+    //     offscreen: {
+    //         y: 300
+    //     },
+    //     onscreen: (custom: number) => ({
+    //         y: 0,
+    //         rotate: 0,
+    //         transition: {
+    //             type: "just",
+    //             bounce: 0.5,
+    //             duration: 1
+    //         }
+    //     })
+    // };
+    const animationBlockDescription = {
+        hidden: {
+            x:0,
+            y: 200,
+            opacity: 0
         },
-        onscreen: (custom: number) => ({
+        visible: (custom:number) => ({
+            x: 0,
             y: 0,
-            rotate: 0,
-            transition: {
-                type: "just",
-                bounce: 0.5,
-                duration: 1
-            }
+            opacity: 1,
+            transition: { delay: custom * 0.2 ,duration: 0.7}
         })
-    };
+    }
     return (
         <motion.div className={styled.projectsBlock}
-                    initial="offscreen"
-                    whileInView="onscreen"
-                    viewport={{once: true, amount: 0.35}}
+                    // initial="offscreen"
+                    // whileInView="onscreen"
+                    // viewport={{once: true, amount: 0.35}}
+                    id={"project"}
+                    initial="hidden"
+                    whileInView="visible"
+                    viewport={{amount: 0.2, once: true}}
+                    style={{overflow: 'hidden'}}
         >
             <motion.div className={projectsContainer}
-                        variants={cardVariants}
+                        variants={animationBlockDescription}
             >
                 <Title title={'Projects'} description={'Showcasing some of my best work'}/>
                 <div className={styled.projects}>

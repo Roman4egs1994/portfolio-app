@@ -61,20 +61,33 @@ export const Skills = () => {
         }
     ]
 
-    const cardVariants: Variants = {
-        offscreen: {
-            y: 200
+    // const cardVariants: Variants = {
+    //     offscreen: {
+    //         y: 200
+    //     },
+    //     onscreen: (custom: number) => ({
+    //         y: 0,
+    //         rotate: 0,
+    //         transition: {
+    //             type: "just",
+    //             bounce: 0.5,
+    //             duration: 1
+    //         }
+    //     })
+    // };
+    const animationBlockDescription = {
+        hidden: {
+            x:0,
+            y: 200,
+            opacity: 0
         },
-        onscreen: (custom: number) => ({
+        visible: (custom:number) => ({
+            x: 0,
             y: 0,
-            rotate: 0,
-            transition: {
-                type: "just",
-                bounce: 0.5,
-                duration: 1
-            }
+            opacity: 1,
+            transition: { delay: custom * 0.2 ,duration: 0.7}
         })
-    };
+    }
 
     const divSkillsContainer = styleContainer.container + " " + styled.skillsContainer;
     const mySkills = skills.map(el =>
@@ -93,15 +106,19 @@ export const Skills = () => {
     return (
         <motion.div
             className={styled.skillsBlock}
-            initial="offscreen"
-            whileInView="onscreen"
-            viewport={{ once: true, amount: 0.35 }}
+            // initial="offscreen"
+            // whileInView="onscreen"
+            // viewport={{ once: true, amount: 0.35 }}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{amount: 0.2, once: true}}
+            style={{overflow: 'hidden'}}
         >
-            <div className={divSkillsContainer}>
+            <div id={"skill"} className={divSkillsContainer}>
                 <Title description={'This is my skills'} title={"Skills"}/>
                 <motion.div
                     className={styled.skills}
-                    variants={cardVariants}
+                    variants={animationBlockDescription}
                 >
                     {mySkills}
                 </motion.div>

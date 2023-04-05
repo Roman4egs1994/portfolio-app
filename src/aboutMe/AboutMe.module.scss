@@ -5,6 +5,7 @@
 .mainBlock {
   background-color: $bgColor;
   box-sizing: border-box;
+  min-height: 100vh;
 
   .mainContainer {
     flex-direction: column;

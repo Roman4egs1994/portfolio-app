@@ -4,7 +4,6 @@ import {AppRootStore} from "../../../store/reduxStore";
 import {onOffCollapsedAC} from "../../../store/reducers/app-reducer";
 import {Nav} from "../../../nav/Nav";
 import styled from './BurgerMenu.module.scss'
-import {useAutoAnimate} from "@formkit/auto-animate/react";
 
 export const BurgerMenu = () => {
 
@@ -22,7 +21,6 @@ export const BurgerMenu = () => {
     }
 
     return (
-
         <>
             <div>
                 <span onClick={onclickCollapsedMenuHandler} className={styled.navBarMenu}>

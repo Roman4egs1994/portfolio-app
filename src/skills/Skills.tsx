@@ -1,15 +1,16 @@
-import React, {FunctionComponent, SVGProps} from 'react';
+import React, {FunctionComponent, SVGProps, useRef} from 'react';
 import styled from './Skills.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
-import {Skill} from "./skill/Skill";
+import {MSkill, Skill} from "./skill/Skill";
 import {v1} from "uuid";
 import Title from "../common/componets/title/Title";
-import reactIcon  from '../common/assets/icon/reactIcon.png'
-import cssIcon  from '../common/assets/icon/cssIcon.png'
-import storyBookIcon  from '../common/assets/icon/storybookIcon.png'
-import typeScript  from '../common/assets/icon/typescriptIcon.png'
-import redux  from '../common/assets/icon/reduxIcon.png'
+import reactIcon from '../common/assets/icon/reactIcon.png'
+import cssIcon from '../common/assets/icon/cssIcon.png'
+import storyBookIcon from '../common/assets/icon/storybookIcon.png'
+import typeScript from '../common/assets/icon/typescriptIcon.png'
+import redux from '../common/assets/icon/reduxIcon.png'
 import figma from '../common/assets/icon/figmaIcon.png'
+import {motion, useMotionValueEvent, useScroll, Variants} from "framer-motion";
 
 
 type SkillsType = {
@@ -60,20 +61,52 @@ export const Skills = () => {
         }
     ]
 
-    const divSkillsContainer = styleContainer.container + " " + styled.skillsContainer;
+    const cardVariants: Variants = {
+        offscreen: {
+            y: 200
+        },
+        onscreen: (custom: number) => ({
+            y: 0,
+            rotate: 0,
+            transition: {
+                type: "just",
+                bounce: 0.5,
+                duration: 1
+            }
+        })
+    };
 
-    const mySkills = skills.map(el => <Skill key={el.id} title={el.title} description={el.description} icon={el.icon}/>)
+    const divSkillsContainer = styleContainer.container + " " + styled.skillsContainer;
+    const mySkills = skills.map(el =>
+        <MSkill
+            key={el.id}
+            title={el.title}
+            description={el.description}
+            icon={el.icon}
+        />)
+
+    // const { scrollY  } = useScroll();
+    // useMotionValueEvent(scrollY, "change", (latest) => {
+    //     console.log("Page scroll: ", latest)
+    // })
 
     return (
-        <div className={styled.skillsBlock}>
-
+        <motion.div
+            className={styled.skillsBlock}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.35 }}
+        >
             <div className={divSkillsContainer}>
                 <Title description={'This is my skills'} title={"Skills"}/>
-                <div className={styled.skills}>
+                <motion.div
+                    className={styled.skills}
+                    variants={cardVariants}
+                >
                     {mySkills}
-                </div>
+                </motion.div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

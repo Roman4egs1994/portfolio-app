@@ -10,6 +10,7 @@ import imageProject4 from '../common/assets/imageProject/item-4.jpg'
 import imageProject5 from '../common/assets/imageProject/item-5.jpg'
 import imageProject6 from '../common/assets/imageProject/item-6.jpg'
 import {v1} from "uuid";
+import {delay, motion, Variants} from "framer-motion";
 
 export const Projects = () => {
 
@@ -62,6 +63,8 @@ export const Projects = () => {
         },
     ]
 
+
+
     const mappedProject = stateProject.map(el => <Project
         key={el.id}
         title={el.title}
@@ -70,15 +73,35 @@ export const Projects = () => {
         href={el.href}
     />)
 
+    const cardVariants: Variants = {
+        offscreen: {
+            y: 300
+        },
+        onscreen: (custom: number) => ({
+            y: 0,
+            rotate: 0,
+            transition: {
+                type: "just",
+                bounce: 0.5,
+                duration: 1
+            }
+        })
+    };
     return (
-        <div className={styled.projectsBlock}>
-            <div className={projectsContainer}>
+        <motion.div className={styled.projectsBlock}
+                    initial="offscreen"
+                    whileInView="onscreen"
+                    viewport={{ once: true, amount: 0.35 }}
+        >
+            <motion.div className={projectsContainer}
+                 variants={cardVariants}
+            >
                 <Title title={'Projects'} description={'Showcasing some of my best work'}/>
                 <div className={styled.projects}>
                     {mappedProject}
                 </div>
-            </div>
-        </div>
+            </motion.div>
+        </motion.div>
     );
 };
 

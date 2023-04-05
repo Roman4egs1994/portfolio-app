@@ -1,10 +1,18 @@
-import React from 'react';
+import React, {forwardRef, LegacyRef} from 'react';
 import styled from "./Address.module.scss";
+import {motion} from 'framer-motion'
 
-export const Address = () => {
+
+
+
+export const Address = React.forwardRef((props, ref:LegacyRef<HTMLElement>) => {
+
     return (
-        <>
-            <address className={styled.profileInfo}>
+
+            <address
+                className={styled.profileInfo}
+                ref={ref}
+            >
                 <div className={styled.row}>
                     <div className={styled.rowSingleInfo}>
                         <span>Name:</span>
@@ -28,9 +36,8 @@ export const Address = () => {
                     </div>
 
                 </div>
-
             </address>
-        </>
     );
-};
+});
 
+export const MAddress = motion(Address)

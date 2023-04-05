@@ -7,13 +7,21 @@ import {Projects} from "./project/Projects";
 import {Contacts} from "./сontacts/Contacts";
 import {Footer} from "./footer/Footer";
 import {Main} from "./main/Main";
+import { useMotionValueEvent, useScroll} from "framer-motion";
 
 
 
 
 function App() {
+
+
+
+
+
     return (
-        <div className="App">
+        <div
+            className="App"
+        >
             <Header/>
             <Main/>
             <AboutMe/>

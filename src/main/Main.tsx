@@ -1,14 +1,18 @@
 import React from 'react';
 import style from './Main.module.scss'
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
-import {hover} from "@testing-library/user-event/dist/hover";
+
+
+
+
 
 
 export const Main = () => {
 
+
+
     const iconStyle = {
         display: "block",
-        // pudding: "10px",
         position: 'absolute',
         right: '0',
         bottom: '0'
@@ -17,10 +21,27 @@ export const Main = () => {
         paddingBottom: '10px'
     }
 
+    const particlesOpt = {
+        'particles':{
+            "number": {
+                "value": 150,
+                "density":{
+                    "enable": true,
+                    "value_area": 800
+                }
+            }
+        }
+    }
+
     return (
         <div className={style.main}>
+            {/*<Particle/>*/}
             <div className={style.container}>
+                {/* eslint-disable-next-line react/jsx-no-undef */}
+                {/*<Particles className={style.particle}  params={particlesOpt}/>*/}
                 <div className={style.containerCenter}>
+
+
                     <div className={style.textCenter}>
                         <h1 className={style.name}>
                             Roman Rybkin
@@ -32,6 +53,7 @@ export const Main = () => {
                             </span>
                         </h4>
                     </div>
+
                     <div className={style.fixedBlock}>
                         <IconSocialNetwork style={iconStyle} styleLi={styleLi}/>
                     </div>

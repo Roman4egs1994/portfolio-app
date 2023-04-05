@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from './Nav.module.scss'
-import {useAutoAnimate} from "@formkit/auto-animate/react";
+
 
 type NavPropsType = {
     style?: object

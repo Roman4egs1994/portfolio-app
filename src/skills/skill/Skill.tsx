@@ -1,5 +1,7 @@
-import React from 'react';
+import React, {forwardRef, LegacyRef} from 'react';
 import styled from './Skill.module.scss'
+import {motion} from "framer-motion";
+import {Address} from "../../aboutMe/adress/Address";
 
 
 
@@ -11,7 +13,7 @@ type SkillPropsType = {
 }
 
 
-export const Skill: React.FC<SkillPropsType> = (props) => {
+export const Skill: React.FC<SkillPropsType> = forwardRef((props,ref:LegacyRef<HTMLDivElement>) => {
     const {
         title,
         description,
@@ -20,7 +22,10 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
 
 
     return (
-        <div className={styled.skill}>
+        <div
+            className={styled.skill}
+            ref={ref}
+        >
             <div className={styled.icon}>
                 <img className={styled.elementIcon} src={icon}/>
             </div>
@@ -28,4 +33,7 @@ export const Skill: React.FC<SkillPropsType> = (props) => {
             <span className={styled.description}>{description}</span>
         </div>
     );
-};
+});
+
+
+export const MSkill = motion(Skill)

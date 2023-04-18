@@ -32,7 +32,7 @@ export const Contacts = () => {
             whileInView="visible"
             viewport={{amount: 0.2, once: true}}
             style={{overflow: 'hidden'}}
-            id={'contact'}
+            id={'contacts'}
         >
             <motion.div
                 className={contactsContainer}

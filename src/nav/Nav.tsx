@@ -9,14 +9,9 @@ type NavPropsType = {
 }
 
 export const Nav = (props: NavPropsType) => {
-
-
-
-
     return (
         <ul className={styled.navbar} style={props.style} >
             <li className={styled.navItem} >
-                {/*<a className={styled.navLink} href="#AboutMe">About</a>*/}
                 <Link activeClass={styled.active}
                       className={styled.navLink}
                       to="AboutMe"
@@ -32,7 +27,6 @@ export const Nav = (props: NavPropsType) => {
                 </Link>
             </li>
             <li className={styled.navItem}>
-                {/*<a className={styled.navLink} href="#skill">Skills</a>*/}
                 <Link activeClass={styled.active}
                       className={styled.navLink}
                       to="skill"
@@ -48,7 +42,6 @@ export const Nav = (props: NavPropsType) => {
                 </Link>
             </li>
             <li className={styled.navItem}>
-                {/*<a className={styled.navLink} href="#project">Project</a>*/}
                 <Link activeClass={styled.active}
                       className={styled.navLink}
                       to="project"
@@ -64,10 +57,9 @@ export const Nav = (props: NavPropsType) => {
                 </Link>
             </li>
             <li className={styled.navItem}>
-                {/*<a className={styled.navLink} href="#contact">Contacts</a>*/}
                 <Link activeClass={styled.active}
                       className={styled.navLink}
-                      to="project"
+                      to="contacts"
                       spy={true}
                       smooth={true}
                       hashSpy={true}

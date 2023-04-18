@@ -1,6 +1,5 @@
 
 .navBarMenu{
-
   display: flex;
   right: 40px;
   flex-direction: column;
@@ -43,7 +42,8 @@
   height: 200px;
   margin: 0;
   display: flex;
-
+  transform: translate(0, 5px);
+  transition: 1s;
   @media (min-width: 768px) and (max-width: 10000px) {
     display: none;
   }

@@ -3,14 +3,14 @@
   "name": "portfolio",
   "builds": [
     {
-      "src": "src/index.tsx",
+      "src": "public/index.html",
       "use": "@vercel/node"
     }
   ],
   "routes": [
     {
       "src": "/(.*)",
-      "dest": "src/index.tsx"
+      "dest": "public/index.html"
     }
   ]
 }

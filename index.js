@@ -9,6 +9,9 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended:false}))
 app.use(bodyParser.json())
 
+let smtp_login = process.env.SMTP_LOGIN ||  "----"
+let smtp_pass = process.env.SMTP_PASS || '----'
+
 let transporter = nodemailer.createTransport({
     host: "smtp.gmail.com",
     port: 587,
@@ -51,8 +54,8 @@ app.post('/sendMessage', async function (req, res) {
     res.send(req.body)
 })
 
+let port = process.env.PORT || 3010
 
-
-app.listen(3010, function () {
+app.listen(port, function () {
     console.log('Example app listening on port 3010!')
 })

@@ -8,7 +8,6 @@ import {motion} from 'framer-motion'
 export const Address = React.forwardRef((props, ref:LegacyRef<HTMLElement>) => {
 
     return (
-
             <address
                 className={styled.profileInfo}
                 ref={ref}
@@ -16,12 +15,12 @@ export const Address = React.forwardRef((props, ref:LegacyRef<HTMLElement>) => {
                 <div className={styled.row}>
                     <div className={styled.rowSingleInfo}>
                         <span>Name:</span>
-                        <p>Roman Rybkin</p>
+                        <p>Roman Moisidi</p>
                     </div>
                     <div className={styled.rowSingleInfo}>
                         <span>Email:</span>
                         <p>
-                            <a href="emma@example.com">roman@example.com</a>
+                            <a  href="mailto:romanmoisidi@gmail.com">romanmoisidi@gmail.com</a>
                         </p>
                     </div>
                 </div>
@@ -32,7 +31,7 @@ export const Address = React.forwardRef((props, ref:LegacyRef<HTMLElement>) => {
                     </div>
                     <div className={styled.rowSingleInfo}>
                         <span>From:</span>
-                        <p>USA, NY</p>
+                        <p>Russia, Ulyanovsk</p>
                     </div>
 
                 </div>

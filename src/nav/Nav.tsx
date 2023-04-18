@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from './Nav.module.scss'
 import {Link} from "react-scroll";
+import {Navigate, Route, Routes} from "react-router-dom";
 
 
 
@@ -71,6 +72,11 @@ export const Nav = (props: NavPropsType) => {
                     Contacts
                 </Link>
             </li>
+            {/*<Routes>*/}
+            {/*    /!*    <Route path={'/'} element={<Main/>}/>*!/*/}
+            {/*    <Route  path={'/404'} element={<h1>404</h1>}/>*/}
+            {/*    <Route  path={'*'} element={<Navigate to={'/404'}/>}/>*/}
+            {/*</Routes>*/}
         </ul>
     );
 };

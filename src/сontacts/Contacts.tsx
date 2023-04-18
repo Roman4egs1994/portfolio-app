@@ -26,9 +26,7 @@ export const Contacts = () => {
                 variants={animationMotion}
             >
                 <Title title={'Get in Touch'} description={'Feel free to contact me anytimes'}/>
-                <motion.div className={styled.forms}
-                            variants={animationMotion}
-                >
+                <motion.div className={styled.forms} variants={animationMotion}>
                     <Form/>
                     <ContactInfo/>
                 </motion.div>

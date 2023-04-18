@@ -6,10 +6,11 @@ type ButtonLinkPropsType = {
     title: string
     styleSettings?: string
     callBack?: () => void
+    type?: 'submit'
 }
 
 export const ButtonLink: React.FC<ButtonLinkPropsType> = (props) => {
-const {title, styleSettings, callBack, ...otherProps} = props
+const {title, styleSettings, callBack, type, ...otherProps} = props
 
 
     const style = styleSettings + " " + styled.buttonGreen
@@ -23,7 +24,7 @@ const {title, styleSettings, callBack, ...otherProps} = props
 
     return (
         <>
-            <button className={style} onClick={onclickCallBackHandler}>{title}</button>
+            <button type={type} className={style} onClick={onclickCallBackHandler}>{title}</button>
         </>
     );
 };

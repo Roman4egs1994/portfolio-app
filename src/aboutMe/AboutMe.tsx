@@ -42,7 +42,7 @@ export const AboutMe = () => {
                         </motion.h2>
                         <motion.h6
                             variants={animationMotion}
-                        >I'm Roman Rybkin, a visual UX/UI Designer and Web Developer
+                        >I'm Roman Moisidi, a visual UX/UI Designer and Web Developer
                         </motion.h6>
                         <motion.p
                             className={styled.text}

@@ -34,7 +34,7 @@ export const ListInfo = () => {
                             </span>
                         <div className={styled.details}>
                             <h6 className={styled.name}>Name</h6>
-                            <span>Roman Rybkin</span>
+                            <span>Roman Moisidi</span>
                         </div>
                     </div>
                 </li>
@@ -45,7 +45,7 @@ export const ListInfo = () => {
                             </span>
                         <div className={styled.details}>
                             <h6 className={styled.name}>Location</h6>
-                            <span>4155 Mann Island, Liverpool, United Kingdom.</span>
+                            <span>Ulyanovsk, Russia.</span>
                         </div>
                     </div>
                 </li>
@@ -68,7 +68,7 @@ export const ListInfo = () => {
                         <div className={styled.details}>
                             <h6 className={styled.name}>Email Me</h6>
                             {/*<span>emma@example.com</span>*/}
-                            <a href="mailto:emma@example.com">emma@example.com</a>
+                            <a target={'_blank'} href="mailto:romanmoisidi@gmail.com">romanmoisidi@gmail.com</a>
                         </div>
                     </div>
                 </li>

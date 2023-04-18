@@ -27,7 +27,7 @@ export const Main = () => {
                 <div className={style.containerCenter}>
                     <div className={style.textCenter}>
                         <h1 className={style.name}>
-                            Roman Rybkin
+                            Roman Moisidi
                         </h1>
                         <h4 className={style.headLine}>
                             I’m a

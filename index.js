@@ -21,8 +21,8 @@ let transporter = nodemailer.createTransport({
     //     rejectUnauthorized: false
     // },
     auth: {
-        user: "romanmoisidi@gmail.com", // generated ethereal user
-        pass: "ddqlcezhpyomwilp", // generated ethereal password
+        user: smtp_login, // generated ethereal user
+        pass: smtp_pass, // generated ethereal password
     },
 });
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactTypingEffect from 'react-typing-effect';
-import styled from './ReactTypingEffect.module.scss'
+
 
 
 type ReactTypingEffectText = {

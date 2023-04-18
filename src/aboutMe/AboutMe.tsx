@@ -8,64 +8,14 @@ import {ButtonLink} from "../common/componets/button/ButtonLink";
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
 import {delay, motion, Variants} from "framer-motion";
 import {Tilt} from 'react-tilt'
+import {animationBlockDescription} from "../common/styles/motionSettings/motionSettings";
+import {defaultOptionsTiltPhoto} from "../common/styles/titlePhotoSettings/titlePhotoSettings";
 
 export const AboutMe = () => {
     const projectsContainer = styleContainer.container + " " + styled.mainContainer
+    const animationMotion = animationBlockDescription
+    const animationPhotoProfile = defaultOptionsTiltPhoto
 
-    const animationBlockImage = {
-        hidden: {
-            x: 0,
-            y: 200,
-            opacity: 0
-        },
-        visible: {
-            x: 0,
-            y: 0,
-            opacity: 1,
-            transition: {delay: 0.2, duration: 0.7},
-        }
-    }
-    const animationBlockDescription = {
-        hidden: {
-            x:0,
-            y: 200,
-            opacity: 0
-        },
-        visible: (custom:number) => ({
-            x: 0,
-            y: 0,
-            opacity: 1,
-            transition: { delay: custom * 0.2 ,duration: 0.7}
-        })
-    }
-
-    // const cardVariants: Variants = {
-    //     offscreen: {
-    //         y: 200
-    //     },
-    //     onscreen: (custom: number) => ({
-    //         y: 0,
-    //         rotate: 0,
-    //         transition: {
-    //             type: "just",
-    //             bounce: 0.5,
-    //             duration: 1
-    //         }
-    //     })
-    // };
-
-
-    const defaultOptionsTiltPhoto = {
-        reverse: false,  // reverse the tilt direction
-        max: 35,     // max tilt rotation (degrees)
-        perspective: 1000,   // Transform perspective, the lower the more extreme the tilt gets.
-        scale: 1,    // 2 = 200%, 1.5 = 150%, etc..
-        speed: 900,   // Speed of the enter/exit transition
-        transition: true,   // Set a transition on enter/exit.
-        axis: null,   // What axis should be disabled. Can be X or Y.
-        reset: true,    // If the tilt effect has to be reset on exit.
-        easing: "cubic-bezier(.03,.98,.52,.99)",    // Easing on enter/exit.
-    }
     return (
         <div id="AboutMe" className={styled.mainBlock}>
             <div className={projectsContainer}>
@@ -76,30 +26,27 @@ export const AboutMe = () => {
                     whileInView="visible"
                     viewport={{amount: 0.2, once: true}}
                     style={{overflow: 'hidden'}}
-                    // initial="offscreen"
-                    // whileInView="onscreen"
-                    // viewport={{once: true, amount: 0.35}}
                 >
                         <div className={styled.photo}>
-                            <Tilt options={defaultOptionsTiltPhoto}>
-                            <motion.img variants={animationBlockImage} src={photoProfile} alt="Profile"
+                            <Tilt options={animationPhotoProfile}>
+                            <motion.img variants={animationMotion} src={photoProfile} alt="Profile"
                             />
                             </Tilt>
                         </div>
                     <motion.div className={styled.profile}
-                                variants={animationBlockDescription}
+                                variants={animationMotion}
                     >
                         <motion.h2
-                            variants={animationBlockDescription}
+                            variants={animationMotion}
                         >Who am i?
                         </motion.h2>
                         <motion.h6
-                            variants={animationBlockDescription}
+                            variants={animationMotion}
                         >I'm Roman Rybkin, a visual UX/UI Designer and Web Developer
                         </motion.h6>
                         <motion.p
                             className={styled.text}
-                            variants={animationBlockDescription}
+                            variants={animationMotion}
                         >I am a freelancer based in the United Kingdom
                             and i have been building noteworthy UX/UI designs and websites for years,
                             which comply with the latest design trends.
@@ -108,10 +55,10 @@ export const AboutMe = () => {
                             iterate fast and deliver faster.
                         </motion.p>
                         <MAddress
-                            variants={animationBlockDescription}
+                            variants={animationMotion}
                         />
                         <motion.div className={styled.cvAndSocialNetworks}
-                                    variants={animationBlockDescription}
+                                    variants={animationMotion}
                         >
                             <motion.div className={styled.btn}>
                                 <ButtonLink title={'Download CV'}/>

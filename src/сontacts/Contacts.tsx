@@ -5,25 +5,12 @@ import {Form} from "./form/Form";
 import Title from "../common/componets/title/Title";
 import {ContactInfo} from "./ContactInfo/ContactInfo";
 import {motion} from "framer-motion";
+import {animationBlockDescription} from "../common/styles/motionSettings/motionSettings";
 
 export const Contacts = () => {
 
     const contactsContainer = styleContainer.container + " " + styled.contactsContainer
-
-
-    const animationBlockDescription = {
-        hidden: {
-            x: 0,
-            y: 200,
-            opacity: 0
-        },
-        visible: (custom: number) => ({
-            x: 0,
-            y: 0,
-            opacity: 1,
-            transition: {delay: custom * 0.2, duration: 0.7}
-        })
-    }
+    const animationMotion = animationBlockDescription
 
     return (
         <motion.div
@@ -36,11 +23,11 @@ export const Contacts = () => {
         >
             <motion.div
                 className={contactsContainer}
-                variants={animationBlockDescription}
+                variants={animationMotion}
             >
                 <Title title={'Get in Touch'} description={'Feel free to contact me anytimes'}/>
                 <motion.div className={styled.forms}
-                            variants={animationBlockDescription}
+                            variants={animationMotion}
                 >
                     <Form/>
                     <ContactInfo/>

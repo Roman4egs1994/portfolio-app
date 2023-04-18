@@ -1,13 +1,14 @@
 import React from 'react';
 import {useDispatch, useSelector} from "react-redux";
-import {AppRootStore} from "../../../store/reduxStore";
-import {onOffCollapsedAC} from "../../../store/reducers/app-reducer";
+import {AppRootStore} from "../../../app/store";
+import {onOffCollapsedAC} from "../../../app/app-reducer";
 import {Nav} from "../../../nav/Nav";
 import styled from './BurgerMenu.module.scss'
+import {useAppDispatch} from "../../../app/castomDispatchAndUseSelector/castomUseAppDispatch";
 
 export const BurgerMenu = () => {
 
-    const dispatch = useDispatch()
+    const dispatch = useAppDispatch()
     const collapsed = useSelector<AppRootStore, boolean>((state) => state.appReducer.collapsed)
 
     const onclickCollapsedMenuHandler = () => {

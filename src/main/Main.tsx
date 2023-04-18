@@ -9,8 +9,6 @@ import React from 'react'
 
 export const Main = () => {
 
-
-
     const iconStyle = {
         display: "block",
         position: 'absolute',

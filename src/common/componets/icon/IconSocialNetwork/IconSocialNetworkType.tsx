@@ -1,15 +1,8 @@
-import React, {CSSProperties, ReactElement} from 'react';
+import React, {ReactElement} from 'react';
 import styled from './IconSocialNetwork.module.scss'
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {
-    faGithub,
-    faInstagram,
-    faLinkedin,
-    faTelegram
-} from '@fortawesome/free-brands-svg-icons';
-import {
-    faEnvelopeSquare, faMobileAndroidAlt,
-} from '@fortawesome/free-solid-svg-icons'
+import {faGithub, faInstagram, faLinkedin, faTelegram} from '@fortawesome/free-brands-svg-icons';
+import {faEnvelopeSquare} from '@fortawesome/free-solid-svg-icons'
 
 
 type iconsItemType = {
@@ -48,15 +41,14 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
         {link: '', icon: email}
     ]
 
-    // const styleForIcons = isIconColumn ? "column" : "row"
+
     return (
         <>
-
             <ul style={props.style} className={styled.followSocialNetwork}>
                 {
-                    iconsItem.map((icon) => {
+                    iconsItem.map((icon,index) => {
                         return (
-                            <li style={props.styleLi} className={styled.item}>
+                            <li  key={index} style={props.styleLi} className={styled.item}>
                                 <span> <a href={icon.link}>{icon.icon}</a></span>
                             </li>
                         )

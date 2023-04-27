@@ -4,7 +4,10 @@ import {ButtonLink} from "../../common/componets/button/ButtonLink";
 import {useFormik} from "formik";
 
 type FormikErrorType = {
+    textName?: string
     email?: string
+    textSubject?: string
+    message?: string
 }
 
 export const Form = () => {
@@ -19,16 +22,41 @@ export const Form = () => {
     // }
 
 
-    const validate = (values: any) => {
+    const validate = (values: FormikErrorType) => {
+
+
         const errors: FormikErrorType = {}
 
+        //Валидация email
         const regX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
-
         if (!values.email) {
-            errors.email = ''
+            errors.email = 'Enter your email address'
         } else if (!regX.test(values.email)) {
             errors.email = 'Invalid email address'
         }
+
+        //Валидация textName
+        if(!values.textName) {
+            errors.textName = "Enter your name between 2 and 30 characters"
+        } else if (values.textName.length < 2  || values.textName.length > 30) {
+            errors.textName = "Character length must be between 2 and 30 characters"
+        }
+
+        //Валидация textSubject
+        if(!values.textSubject) {
+            errors.textSubject = "Enter the subject of your message between 5 and 60 characters"
+        } else if (values.textSubject.length < 5 || values.textSubject.length > 60) {
+            errors.textSubject = "Character length must be between 5 and 60 characters"
+        }
+
+        //Валидация message
+        if(!values.message) {
+            errors.message = "Enter your message between 50 and 1000 characters"
+        } else if (values.message.length < 50 || values.message.length > 1000) {
+            errors.textSubject = "Character length must be between 50 and 1000 characters"
+        }
+
+
         return errors
         }
 
@@ -62,50 +90,54 @@ export const Form = () => {
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                name='textName'
+                                // name='textName'
                                 type="text"
                                 id='textName'
                                 placeholder="Name"
-                                required={true}
-                                onChange={formik.handleChange}
-                                value={formik.values.textName}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.textName}
+                                {...formik.getFieldProps('textName')}
                             />
+                            {formik.touched.textName && formik.errors.textName && <div className={styled.errorTextName}>{formik.errors.textName}</div>}
                         </div>
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                name="email"
+                                // name="email"
                                 type="email"
                                 id="email"
                                 placeholder="Email"
                                 // required={true}
-                                onChange={formik.handleChange}
-                                value={formik.values.email}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.email}
+                                {...formik.getFieldProps('email')}
                             />
-                            {formik.errors.email ? <div>{formik.errors.email}</div> : null}
+                            {formik.touched.email && formik.errors.email && <div className={styled.errorEmail}>{formik.errors.email}</div>}
                         </div>
                         <div className={styled.formGroupStandard}>
                             <input
                                 className={styled.formControlStandard}
-                                name="textSubject"
+                                // name="textSubject"
                                 type="text"
                                 id="textSubject"
                                 placeholder="Subject"
-                                required={true}
-                                onChange={formik.handleChange}
-                                value={formik.values.textSubject}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.textSubject}
+                                {...formik.getFieldProps('textSubject')}
                             />
+                            {formik.touched.textSubject && formik.errors.textSubject && <div className={styled.textSubject}>{formik.errors.textSubject}</div>}
                         </div>
                         <div className={styled.formMessage}>
                             <textarea
-                                name="message"
+                                // name="message"
                                 inputMode='text'
                                 id="message"
                                 placeholder="Message"
-                                required={true}
-                                onChange={formik.handleChange}
-                                value={formik.values.message}
+                                // onChange={formik.handleChange}
+                                // value={formik.values.message}
+                                {...formik.getFieldProps('message')}
                             />
+                            {formik.touched.message && formik.errors.message && <div className={styled.message}>{formik.errors.message}</div>}
                         </div>
                         <div className={styled.submit}>
                             <ButtonLink

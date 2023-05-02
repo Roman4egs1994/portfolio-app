@@ -2,6 +2,8 @@ import React from 'react';
 import styled from './Form.module.scss'
 import {ButtonLink} from "../../common/componets/button/ButtonLink";
 import {useFormik} from "formik";
+import {useAppDispatch} from "../../app/castomDispatchAndUseSelector/castomUseAppDispatch";
+import {getFormValuesAC, getFormValuesTC} from "../contact-reducer";
 
 type FormikErrorType = {
     textName?: string
@@ -9,6 +11,9 @@ type FormikErrorType = {
     textSubject?: string
     message?: string
 }
+
+
+
 
 export const Form = () => {
 
@@ -21,6 +26,7 @@ export const Form = () => {
     //     // dispatch(sendMessageTC())
     // }
 
+    const dispatch = useAppDispatch()
 
     const validate = (values: FormikErrorType) => {
 
@@ -71,7 +77,9 @@ export const Form = () => {
         },
         validate,
         onSubmit: values => {
-            alert(JSON.stringify(values, null, 2));
+            // alert(JSON.stringify(values, null, 2));
+            dispatch(getFormValuesTC(values))
+            formik.resetForm()
         },
     });
 
@@ -90,12 +98,9 @@ export const Form = () => {
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                // name='textName'
                                 type="text"
                                 id='textName'
                                 placeholder="Name"
-                                // onChange={formik.handleChange}
-                                // value={formik.values.textName}
                                 {...formik.getFieldProps('textName')}
                             />
                             {formik.touched.textName && formik.errors.textName && <div className={styled.errorTextName}>{formik.errors.textName}</div>}
@@ -103,13 +108,9 @@ export const Form = () => {
                         <div className={styled.formGroupMini}>
                             <input
                                 className={styled.formControl}
-                                // name="email"
                                 type="email"
                                 id="email"
                                 placeholder="Email"
-                                // required={true}
-                                // onChange={formik.handleChange}
-                                // value={formik.values.email}
                                 {...formik.getFieldProps('email')}
                             />
                             {formik.touched.email && formik.errors.email && <div className={styled.errorEmail}>{formik.errors.email}</div>}
@@ -117,24 +118,18 @@ export const Form = () => {
                         <div className={styled.formGroupStandard}>
                             <input
                                 className={styled.formControlStandard}
-                                // name="textSubject"
                                 type="text"
                                 id="textSubject"
                                 placeholder="Subject"
-                                // onChange={formik.handleChange}
-                                // value={formik.values.textSubject}
                                 {...formik.getFieldProps('textSubject')}
                             />
                             {formik.touched.textSubject && formik.errors.textSubject && <div className={styled.textSubject}>{formik.errors.textSubject}</div>}
                         </div>
                         <div className={styled.formMessage}>
                             <textarea
-                                // name="message"
                                 inputMode='text'
                                 id="message"
                                 placeholder="Message"
-                                // onChange={formik.handleChange}
-                                // value={formik.values.message}
                                 {...formik.getFieldProps('message')}
                             />
                             {formik.touched.message && formik.errors.message && <div className={styled.message}>{formik.errors.message}</div>}

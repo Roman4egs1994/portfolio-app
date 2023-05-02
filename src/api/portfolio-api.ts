@@ -6,9 +6,15 @@ import {Dispatch} from "redux";
 // })
 
 export const portfolioApi = {
-    sendMessageGmail(){
-        return axios.post('http://localhost:3010/sendMessage')
+    sendMessageGmail(data: FormType){
+        return axios.post('http://localhost:3009/sendMessage', data)
     }
 }
 
 
+export type FormType = {
+    textName: string
+    email: string
+    textSubject: string
+    message: string
+}

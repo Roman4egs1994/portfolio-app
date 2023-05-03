@@ -17,7 +17,6 @@ let smtp_login = process.env.SMTP_LOGIN ||  "----"
 let smtp_pass = process.env.SMTP_PASS || '----'
 
 let transporter = nodemailer.createTransport({
-    // service: "gmail"
     host: "smtp.gmail.com",
     port: 587,
     // port: 25,

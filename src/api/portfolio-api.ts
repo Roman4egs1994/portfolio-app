@@ -14,7 +14,7 @@ export const portfolioApi = {
     sendMessageGmail(data: FormType){
         return axios.post('https://potfolio-app-zeta.vercel.app/message', data, {headers: {
                 'Content-Type': 'application/json'
-            }})
+            }, withCredentials: true})
     }
 }
 

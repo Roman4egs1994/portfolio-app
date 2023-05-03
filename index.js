@@ -54,17 +54,17 @@ app.post('/sendMessage', async function (req, res) {
 `
     });
 
-    // transporter.sendMail(info, (error, info) => {
-    //     if (error) {
-    //         console.log(error);
-    //         res.status(500).send('Error sending email');
-    //     } else {
-    //         console.log(`Email sent: ${info.response}`);
-    //         res.send('Email sent successfully');
-    //     }
-    // });
-    // res.send(req.body)
+    transporter.sendMail(info, (error, info) => {
+        if (error) {
+            console.log(error);
+            res.status(500).send('Error sending email');
+        } else {
+            console.log(`Email sent: ${info.response}`);
+            res.send('Email sent successfully');
+        }
+    });
     res.send(req.body)
+    // res.send(req.body)
 })
 
 

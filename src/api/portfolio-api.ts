@@ -5,12 +5,16 @@ import {Dispatch} from "redux";
 //     baseURL: "http://localhost:3010/sendMessage"
 // })
 
+// export const portfolioApi = {
+//     sendMessageGmail(data: FormType){
+//         return axios.post('http://localhost:3009/sendMessage', data)
+//     }
+// }
 export const portfolioApi = {
     sendMessageGmail(data: FormType){
-        return axios.post('http://localhost:3009/sendMessage', data)
+        return axios.post('https://potfolio-app-zeta.vercel.app/sendMessage', data)
     }
 }
-
 
 export type FormType = {
     textName: string

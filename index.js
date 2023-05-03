@@ -36,18 +36,10 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.post('/sendMessage', async function (req, res) {
-    res.setHeader('Access-Control-Allow-Credentials', true)
-    res.setHeader('Access-Control-Allow-Origin', '*')
-    // another common pattern
-    // res.setHeader('Access-Control-Allow-Origin', req.headers.origin);
-    res.setHeader('Access-Control-Allow-Methods', 'GET,OPTIONS,PATCH,DELETE,POST,PUT')
-    res.setHeader(
-        'Access-Control-Allow-Headers',
-        'X-CSRF-Token, X-Requested-With, Accept, Accept-Version, Content-Length, Content-MD5, Content-Type, Date, X-Api-Version'
-    )
+app.post('/message', async function (req, res) {
+
     let {textName, email, textSubject, message} = req.body
-    console.log('textName c index.js',textName)
+    // console.log('textName c index.js',textName)
     let info = await transporter.sendMail({
         from: 'HR WANTS ME', // sender address
         to: "romanmoisidi@gmail.com", // list of receivers
@@ -62,15 +54,6 @@ app.post('/sendMessage', async function (req, res) {
 `
     });
 
-    transporter.sendMail(info, (error, info) => {
-        if (error) {
-            console.log(error);
-            res.status(500).send('Error sending email');
-        } else {
-            console.log(`Email sent: ${info.response}`);
-            res.send('Email sent successfully');
-        }
-    });
     res.send(req.body)
     // res.send(req.body)
 })

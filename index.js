@@ -9,7 +9,7 @@ const bodyParser = require('body-parser')
 
 const app = express();
 let port = process.env.PORT || 5000
-app.use(cors({origin: '*'}))
+app.use(cors({origin: 'http://localhost:3000/'}))
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 

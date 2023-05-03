@@ -36,13 +36,13 @@ app.get('/', function (req, res) {
     res.send('Hello World')
 })
 
-app.post('/message', async function (req, res,next) {
+app.post('/message', async function (req, res) {
 
-    res.setHeader('Access-Control-Allow-Origin', '*');
-    res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
-    res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
-    res.setHeader('Access-Control-Allow-Credentials', true);
-    next();
+    // res.setHeader('Access-Control-Allow-Origin', '*');
+    // res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS');
+    // res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
+    // res.setHeader('Access-Control-Allow-Credentials', true);
+    // next();
 
     let {textName, email, textSubject, message} = req.body
     // console.log('textName c index.js',textName)

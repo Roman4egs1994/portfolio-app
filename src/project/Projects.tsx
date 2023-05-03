@@ -21,7 +21,8 @@ export const Projects = () => {
         imageProject={el.image}
         headerProject={el.headerProject}
         href={el.href}
-    />)
+    />
+    )
 
     return (
         <motion.div className={styled.projectsBlock}

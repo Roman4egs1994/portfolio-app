@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/potfolio-app/static/css/main.15b137a4.css",
+    "main.js": "/potfolio-app/static/js/main.5fe2a22f.js",
+    "static/js/787.1ed0c42c.chunk.js": "/potfolio-app/static/js/787.1ed0c42c.chunk.js",
+    "static/media/item-6.jpg": "/potfolio-app/static/media/item-6.2c6907f122b2c16f4d7d.jpg",
+    "static/media/item-4.jpg": "/potfolio-app/static/media/item-4.0f89421a466080b93ac7.jpg",
+    "static/media/item-5.jpg": "/potfolio-app/static/media/item-5.4722e978a168256ee153.jpg",
+    "static/media/Profile.jpg": "/potfolio-app/static/media/Profile.6abf6c42eb354aa91ac3.jpg",
+    "static/media/item-1.jpg": "/potfolio-app/static/media/item-1.4849ba0eb24bbc85b22c.jpg",
+    "static/media/item-2.jpg": "/potfolio-app/static/media/item-2.45e24783fd52ce7d6826.jpg",
+    "static/media/item-3.jpg": "/potfolio-app/static/media/item-3.b17f027fa57ab66bf439.jpg",
+    "static/media/reactIcon.png": "/potfolio-app/static/media/reactIcon.31efbd593d34f0cbbae9.png",
+    "static/media/reduxIcon.png": "/potfolio-app/static/media/reduxIcon.9d46587d436226ba4813.png",
+    "static/media/storybookIcon.png": "/potfolio-app/static/media/storybookIcon.c0d11e818db3ec44a924.png",
+    "index.html": "/potfolio-app/index.html",
+    "main.15b137a4.css.map": "/potfolio-app/static/css/main.15b137a4.css.map",
+    "main.5fe2a22f.js.map": "/potfolio-app/static/js/main.5fe2a22f.js.map",
+    "787.1ed0c42c.chunk.js.map": "/potfolio-app/static/js/787.1ed0c42c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.15b137a4.css",
+    "static/js/main.5fe2a22f.js"
+  ]
+}

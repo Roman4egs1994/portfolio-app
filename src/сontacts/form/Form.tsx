@@ -3,7 +3,7 @@ import styled from './Form.module.scss'
 import {ButtonLink} from "../../common/componets/button/ButtonLink";
 import {useFormik} from "formik";
 import {useAppDispatch} from "../../app/castomDispatchAndUseSelector/castomUseAppDispatch";
-import {getFormValuesAC, getFormValuesTC} from "../contact-reducer";
+import {getFormValuesTC} from "../contact-reducer";
 
 type FormikErrorType = {
     textName?: string
@@ -17,20 +17,11 @@ type FormikErrorType = {
 
 export const Form = () => {
 
-    // const onclickFormSendMessage = () => {
-    //
-    //     axios.post("http://localhost:3010/sendMessage")
-    //         .then((res) => {
-    //             alert('Your message has be sent')
-    //         })
-    //     // dispatch(sendMessageTC())
-    // }
 
     const dispatch = useAppDispatch()
 
+
     const validate = (values: FormikErrorType) => {
-
-
         const errors: FormikErrorType = {}
 
         //Валидация email
@@ -77,13 +68,11 @@ export const Form = () => {
         },
         validate,
         onSubmit: values => {
-            // alert(JSON.stringify(values, null, 2));
             dispatch(getFormValuesTC(values))
             formik.resetForm()
         },
     });
 
-    // console.log(formik.errors)
 
     return (
         <>

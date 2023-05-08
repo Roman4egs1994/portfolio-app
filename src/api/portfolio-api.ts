@@ -1,9 +1,16 @@
 import axios from "axios";
 
 
+// export const portfolioApi = {
+//     sendMessageGmail(data: FormType){
+//         return axios.post('https://backend-portfolio-production-e60f.up.railway.app/message', data, {headers: {
+//                 'Content-Type': 'application/json'
+//             }})
+//     }
+// }
 export const portfolioApi = {
     sendMessageGmail(data: FormType){
-        return axios.post('https://backend-portfolio-production-e60f.up.railway.app/message', data, {headers: {
+        return axios.post('https://backend-portfilio-vercel.vercel.app/message', data, {headers: {
                 'Content-Type': 'application/json'
             }})
     }

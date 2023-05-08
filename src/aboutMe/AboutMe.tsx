@@ -3,10 +3,10 @@ import styled from './AboutMe.module.scss'
 import styleContainer from '../common/styles/Container.module.scss'
 import photoProfile from '../common/assets/photoProfile/Profile.jpg'
 import Title from "../common/componets/title/Title";
-import {Address, MAddress} from "./adress/Address";
+import { MAddress} from "./adress/Address";
 import {ButtonLink} from "../common/componets/button/ButtonLink";
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
-import {delay, motion, Variants} from "framer-motion";
+import {motion} from "framer-motion";
 import {Tilt} from 'react-tilt'
 import {animationBlockDescription} from "../common/styles/motionSettings/motionSettings";
 import {defaultOptionsTiltPhoto} from "../common/styles/titlePhotoSettings/titlePhotoSettings";

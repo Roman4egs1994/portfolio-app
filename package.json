@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://Roman4egs1994.github.io/Portfolio",
+  "homepage": "https://Roman4egs1994.github.io/potfolio-app",
   "dependencies": {
     "@emotion/react": "^11.10.6",
     "@fortawesome/fontawesome-svg-core": "^6.3.0",

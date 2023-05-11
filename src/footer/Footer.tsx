@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from './footer.module.scss'
 import styleContainer from "../common/styles/Container.module.scss";
-import {FooterElement} from "./footerElement/footerElement";
+import Logotype from '../common/assets/logo/logoNew.png'
 
 export const Footer = () => {
 
@@ -13,25 +13,25 @@ export const Footer = () => {
                 <div className={styled.hrFooter}></div>
                 <div className={styled.center}>
                     <div className={styled.footerLogo}>
-                        <a href="">
-                            <img src="" alt="L O G O"/>
+                        <a href="/">
+                            <img src={Logotype} alt="logo"/>
                         </a>
                     </div>
                     <ul className={styled.siteSocial}>
                         <li>
-                            <a href="">instagram</a>
+                            <a target={"_blank"} href="https://www.instagram.com/romanpirs__?utm_source=qr">instagram</a>
                         </li>
                         <li>
-                            <a href="">LinkedIn</a>
+                            <a target={"_blank"} href="https://www.linkedin.com/in/roman-rybkin-456260267/">LinkedIn</a>
                         </li>
                         <li>
-                            <a href="">GitHub</a>
+                            <a target={"_blank"} href="https://github.com/Roman4egs1994">GitHub</a>
                         </li>
                         <li>
-                            <a href="">gmail</a>
+                            <a target={"_blank"} href="mailto:romanmoisidi@gmail.com">gmail</a>
                         </li>
                         <li>
-                            <a href="">telegram</a>
+                            <a  target={"_blank"} href="https://t.me/RomanSetGet94">telegram</a>
                         </li>
                     </ul>
                     <p className={styled.footerText}>

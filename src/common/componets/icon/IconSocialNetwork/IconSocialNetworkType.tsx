@@ -34,11 +34,11 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
 
 
     const iconsItem:iconsItemType[] = [
-        {link: '', icon: telegram},
-        {link: '', icon: instagram},
-        {link: '', icon: linkedinIn},
-        {link: '', icon: gitHub},
-        {link: '', icon: email}
+        {link: 'https://t.me/RomanSetGet94', icon: telegram},
+        {link: 'https://www.instagram.com/romanpirs__?utm_source=qr', icon: instagram},
+        {link: 'https://www.linkedin.com/in/roman-rybkin-456260267/', icon: linkedinIn},
+        {link: 'https://github.com/Roman4egs1994', icon: gitHub},
+        {link: 'mailto:romanmoisidi@gmail.com', icon: email}
     ]
 
 
@@ -49,7 +49,7 @@ export const IconSocialNetwork = (props: IconSocialNetworkType) => {
                     iconsItem.map((icon,index) => {
                         return (
                             <li  key={index} style={props.styleLi} className={styled.item}>
-                                <span> <a href={icon.link}>{icon.icon}</a></span>
+                                <span> <a target={"_blank"} href={icon.link}>{icon.icon}</a></span>
                             </li>
                         )
                     })

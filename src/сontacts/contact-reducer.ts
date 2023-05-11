@@ -36,7 +36,7 @@ export const getFormValuesTC = (data: FormType) => {
                 console.log(res.request)
             })
             .catch((err)=>{
-                alert('Не отправлено')
+                alert('Письмо не отправлено')
             })
     }
 }

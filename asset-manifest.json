@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/potfolio-app/static/css/main.15b137a4.css",
-    "main.js": "/potfolio-app/static/js/main.5798e95a.js",
+    "main.css": "/potfolio-app/static/css/main.a50b085c.css",
+    "main.js": "/potfolio-app/static/js/main.b6fe3f2f.js",
     "static/js/787.1ed0c42c.chunk.js": "/potfolio-app/static/js/787.1ed0c42c.chunk.js",
     "static/media/Profile.jpg": "/potfolio-app/static/media/Profile.38121b47e2ea8732948d.jpg",
     "static/media/item-6.jpg": "/potfolio-app/static/media/item-6.2c6907f122b2c16f4d7d.jpg",
@@ -14,12 +14,12 @@
     "static/media/reduxIcon.png": "/potfolio-app/static/media/reduxIcon.9d46587d436226ba4813.png",
     "static/media/storybookIcon.png": "/potfolio-app/static/media/storybookIcon.c0d11e818db3ec44a924.png",
     "index.html": "/potfolio-app/index.html",
-    "main.15b137a4.css.map": "/potfolio-app/static/css/main.15b137a4.css.map",
-    "main.5798e95a.js.map": "/potfolio-app/static/js/main.5798e95a.js.map",
+    "main.a50b085c.css.map": "/potfolio-app/static/css/main.a50b085c.css.map",
+    "main.b6fe3f2f.js.map": "/potfolio-app/static/js/main.b6fe3f2f.js.map",
     "787.1ed0c42c.chunk.js.map": "/potfolio-app/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.15b137a4.css",
-    "static/js/main.5798e95a.js"
+    "static/css/main.a50b085c.css",
+    "static/js/main.b6fe3f2f.js"
   ]
 }

@@ -1,25 +1,25 @@
 {
   "files": {
-    "main.css": "/potfolio-app/static/css/main.575b59fb.css",
-    "main.js": "/potfolio-app/static/js/main.cd2bc3af.js",
+    "main.css": "/potfolio-app/static/css/main.e428f994.css",
+    "main.js": "/potfolio-app/static/js/main.69fd23a9.js",
     "static/js/787.1ed0c42c.chunk.js": "/potfolio-app/static/js/787.1ed0c42c.chunk.js",
     "static/media/Profile.jpg": "/potfolio-app/static/media/Profile.38121b47e2ea8732948d.jpg",
+    "static/media/item-1.jpg": "/potfolio-app/static/media/item-1.131e768dddf865ed5dcc.jpg",
     "static/media/item-6.jpg": "/potfolio-app/static/media/item-6.2c6907f122b2c16f4d7d.jpg",
     "static/media/item-4.jpg": "/potfolio-app/static/media/item-4.0f89421a466080b93ac7.jpg",
     "static/media/item-5.jpg": "/potfolio-app/static/media/item-5.4722e978a168256ee153.jpg",
-    "static/media/item-1.jpg": "/potfolio-app/static/media/item-1.4849ba0eb24bbc85b22c.jpg",
     "static/media/item-2.jpg": "/potfolio-app/static/media/item-2.45e24783fd52ce7d6826.jpg",
     "static/media/item-3.jpg": "/potfolio-app/static/media/item-3.b17f027fa57ab66bf439.jpg",
     "static/media/reactIcon.png": "/potfolio-app/static/media/reactIcon.31efbd593d34f0cbbae9.png",
     "static/media/reduxIcon.png": "/potfolio-app/static/media/reduxIcon.9d46587d436226ba4813.png",
     "static/media/storybookIcon.png": "/potfolio-app/static/media/storybookIcon.c0d11e818db3ec44a924.png",
     "index.html": "/potfolio-app/index.html",
-    "main.575b59fb.css.map": "/potfolio-app/static/css/main.575b59fb.css.map",
-    "main.cd2bc3af.js.map": "/potfolio-app/static/js/main.cd2bc3af.js.map",
+    "main.e428f994.css.map": "/potfolio-app/static/css/main.e428f994.css.map",
+    "main.69fd23a9.js.map": "/potfolio-app/static/js/main.69fd23a9.js.map",
     "787.1ed0c42c.chunk.js.map": "/potfolio-app/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.575b59fb.css",
-    "static/js/main.cd2bc3af.js"
+    "static/css/main.e428f994.css",
+    "static/js/main.69fd23a9.js"
   ]
 }

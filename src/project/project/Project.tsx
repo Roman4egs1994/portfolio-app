@@ -21,6 +21,7 @@ export const Project: React.FC<ProjectPropsType> = (props) => {
             <div className={styled.imageProjectAndBtn}>
                 <ul className={animation.hoverEffectScale}>
                     <li>
+                        {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
                         <img src={imageProject} alt="image project"/>
                             <div>
                                 <h2>{headerProject}</h2>

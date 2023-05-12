@@ -47,12 +47,11 @@ export const AboutMe = () => {
                         <motion.p
                             className={styled.text}
                             variants={animationMotion}
-                        >I am a freelancer based in the United Kingdom
-                            and i have been building noteworthy UX/UI designs and websites for years,
-                            which comply with the latest design trends.
-                            I help convert a vision and an idea into meaningful and useful products.
-                            Having a sharp eye for product evolution helps me prioritize tasks,
-                            iterate fast and deliver faster.
+                        >I am a beginner web developer. I write frontend development on the well-known React library.
+                            I have about a year experience in development.
+                            I am constantly learning and delving into the world of development and React.
+                            I fanatically approach my work and devote a lot of time to it and approach my work with an architectural approach.
+                            I am very charged for my professional growth and I want to achieve great heights in web development.
                         </motion.p>
                         <MAddress
                             variants={animationMotion}

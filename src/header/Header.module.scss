@@ -13,13 +13,6 @@
   top: 0;
   z-index: 1030;
 
-  .navBarBrand {
-    img {
-      width: 80px;
-        height: auto;
-    }
-  }
-
   .displayNoneNavigate {
     @media (max-width: 767.80px) {
       display: none;
@@ -36,13 +29,17 @@
   }
 
   .navBarBrand {
-    display: inline-block;
-    font-size: 1.25rem;
-    line-height: inherit;
-    margin-right: 1rem;
-    padding-bottom: 0.3125rem;
-    padding-top: 0.3125rem;
+    display: block;
+
+    margin-right: 0;
+    padding-bottom: 13px;
+    padding-top: 0;
     white-space: nowrap;
+
+    img {
+      width: 80px;
+      height: auto;
+    }
   }
 
 }

@@ -13,7 +13,7 @@ export const Footer = () => {
                 <div className={styled.hrFooter}></div>
                 <div className={styled.center}>
                     <div className={styled.footerLogo}>
-                        <a href="/">
+                        <a href="https://roman4egs1994.github.io/potfolio-app/">
                             <img src={Logotype} alt="logo"/>
                         </a>
                     </div>

@@ -13,7 +13,7 @@ const initialState: ProjectStateType[] = [
         image: imageProject1,
         title: "Social Network",
         headerProject: 'Описание',
-        href: "www.google.com"
+        href: "https://roman4egs1994.github.io/todolists/"
     },
     {
         id: v1(),

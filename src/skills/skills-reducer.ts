@@ -12,37 +12,37 @@ const initialState: SkillsStateType[] = [
         id: v1(),
         icon: reactIcon,
         title: "React",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        description: "Architectural approach to development on React libraries. UI, BLL, DAL levels. Knowledge of both functional and class components."
     },
     {
         id: v1(),
         icon: typeScript,
         title: "TypeScript",
-        description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit.'
+        description: 'Deep knowledge of TypeScript'
     },
     {
         id: v1(),
         icon: cssIcon,
         title: "Design Trends",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        description: "Understanding modern CSS. Using SCSS and lots of styling libraries."
     },
     {
         id: v1(),
         icon: figma,
         title: "Figma",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        description: "Ability to reproduce designs from Figma with great design accuracy."
     },
     {
         id: v1(),
         icon: storyBookIcon,
         title: "Storybook",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        description: "Can use StoryBook libraries to test and reuse components."
     },
     {
         id: v1(),
         icon: redux,
         title: "Redux",
-        description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+        description: "I know how to formulate the BLL level of a React application in React. Using react-thunk. Knowledge of both redux-toolkit and legasy redux."
     }
 ]
 

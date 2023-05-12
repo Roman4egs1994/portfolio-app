@@ -7,77 +7,97 @@ import imageProject5 from "../common/assets/imageProject/item-5.jpg";
 import imageProject6 from "../common/assets/imageProject/item-6.jpg";
 
 
-const initialState: ProjectStateType[] = [
-    {
-        id: v1(),
-        image: imageProject1,
-        title: "Social Network",
-        headerProject: 'Описание',
-        href: "https://roman4egs1994.github.io/todolists/"
-    },
-    {
-        id: v1(),
-        image: imageProject2,
-        title: "Todolist",
-        headerProject: 'Описание',
-        href: "www.google.com"
-    },
-    {
-        id: v1(),
-        image: imageProject3,
-        title: "Counter",
-        headerProject: 'Описание',
-        href: "www.google.com"
-    },
-    {
-        id: v1(),
-        image: imageProject4,
-        title: "Counter",
-        headerProject: 'Описание',
-        href: "www.google.com"
-    },
-    {
-        id: v1(),
-        image: imageProject5,
-        title: "Counter",
-        headerProject: 'Описание',
-        href: "www.google.com"
-    },
-    {
-        id: v1(),
-        image: imageProject6,
-        title: "Counter",
-        headerProject: 'Описание',
-        href: "www.google.com"
-    },
-]
+const initialState: ProjectStateType = {
+    projects: [
+        {
+            id: v1(),
+            image: imageProject1,
+            title: "TodoList",
+            headerProject: 'TodoList',
+            href: "https://roman4egs1994.github.io/todolists/",
+            status: "ready"
+        },
+        {
+            id: v1(),
+            image: imageProject2,
+            title: "Stub",
+            headerProject: 'Stub',
+            href: "#",
+            status: "not ready"
+        },
+        {
+            id: v1(),
+            image: imageProject3,
+            title: "Stub",
+            headerProject: 'Stub',
+            href: "#",
+            status: "not ready"
+        },
+        {
+            id: v1(),
+            image: imageProject4,
+            title: "Stub",
+            headerProject: 'Stub',
+            href: "#",
+            status: "not ready"
+        },
+        {
+            id: v1(),
+            image: imageProject5,
+            title: "Stub",
+            headerProject: 'Stub',
+            href: "#",
+            status: "not ready"
+        },
+        {
+            id: v1(),
+            image: imageProject6,
+            title: "Stub",
+            headerProject: 'Stub',
+            href: "#",
+            status: "not ready"
+        }
+    ]
+
+}
 
 export const projectReducer = (state = initialState, action: ProjectActionType) => {
     switch (action.type) {
         case "SET-PROJECT": {
-            return  action.projects.map((el) => ({...el}))
+            return action.project.map((el) => ({...el}))
+        }
+        case "PROJECT-STATUS": {
+            return state.projects.map((el) => el.id === action.id
+                ? {...el, status: action.status}
+                : el
+            )
         }
         default: {
-            return  state
+            return state
         }
     }
 }
 
 
+const setProjectAC = (project: ProjectType[]) => ({type: "SET-PROJECT", project}) as const
+const statusProjectAC = (id: string, status: TypeProjectStatus) =>
+    ({type: "PROJECT-STATUS", id, status}) as const
 
-const setProjectAC = (projects:ProjectStateType[]) => ({type: "SET-PROJECT", projects} ) as const
-
-
+type ProjectActionType = SetProjectACType | StatusProjectType
 
 type SetProjectACType = ReturnType<typeof setProjectAC>
+type StatusProjectType = ReturnType<typeof statusProjectAC>
 
-type ProjectActionType = SetProjectACType
-
-
-export type ProjectStateType = {
+type TypeProjectStatus = "ready" | 'not ready'
+export type ProjectType = {
     id: string,
     image: string,
     title: string,
     headerProject: string,
-    href:string
+    href: string,
+    status: TypeProjectStatus
+}
+
+export type ProjectStateType = {
+    projects: ProjectType[]
 }

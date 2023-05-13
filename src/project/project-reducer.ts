@@ -88,6 +88,7 @@ type ProjectActionType = SetProjectACType | StatusProjectType
 type SetProjectACType = ReturnType<typeof setProjectAC>
 type StatusProjectType = ReturnType<typeof statusProjectAC>
 
+
 type TypeProjectStatus = "ready" | 'not ready'
 export type ProjectType = {
     id: string,

@@ -7,13 +7,15 @@ type ButtonLinkPropsType = {
     styleSettings?: string
     callBack?: () => void
     type?: 'submit'
+    disabled?: boolean
+    style?: object
 }
 
 export const ButtonLink: React.FC<ButtonLinkPropsType> = (props) => {
-const {title, styleSettings, callBack, type, ...otherProps} = props
+    const {title, styleSettings, callBack, type, style, disabled, ...otherProps} = props
 
 
-    const style = styleSettings + " " + styled.buttonGreen
+    const styles = styled.buttonGreen + " " + styleSettings
 
     const onclickCallBackHandler = () => {
         if (callBack) {
@@ -24,7 +26,15 @@ const {title, styleSettings, callBack, type, ...otherProps} = props
 
     return (
         <>
-            <button type={type} className={style} onClick={onclickCallBackHandler}>{title}</button>
+            <button
+                type={type}
+                disabled={disabled}
+                className={styles}
+                onClick={onclickCallBackHandler}
+                style={style}
+            >
+                {title}
+            </button>
         </>
     );
 };

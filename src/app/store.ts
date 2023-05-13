@@ -4,6 +4,7 @@ import thunk from "redux-thunk";
 import {projectReducer} from "../project/project-reducer";
 import {skillsReducer} from "../skills/skills-reducer";
 import {contactReducer} from "../сontacts/contact-reducer";
+import {ModalReducer} from "../common/componets/modalWindow/modalReducer";
 
 
 
@@ -11,7 +12,8 @@ export const rootReducer = combineReducers({
     appReducer: appReducer,
     projectReducer: projectReducer,
     skillsReducer: skillsReducer,
-    contactReducer: contactReducer
+    contactReducer: contactReducer,
+    modalWindowReducer: ModalReducer
 })
 
 

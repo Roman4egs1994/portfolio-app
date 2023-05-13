@@ -1,6 +1,8 @@
 
 import {Dispatch} from "redux";
 import {FormType, portfolioApi} from "../api/portfolio-api";
+import {setStatusLoadingAC, SetStatusLoadingType} from "../app/app-reducer";
+import {modalWindowsOnOffAC, ModalWindowsOnOffType} from "../common/componets/modalWindow/modalReducer";
 
 
 const initialState = {}
@@ -29,18 +31,21 @@ export const getFormValuesAC = (values: FormType) => {
 
 export const getFormValuesTC = (data: FormType) => {
     return (dispatch:Dispatch) => {
+        dispatch(setStatusLoadingAC('loading'))
         portfolioApi.sendMessageGmail(data)
             .then((res)=>{
                 // dispatch(getFormValuesAC(data))
-                alert('Письмо отправлено')
-                console.log(res.request)
+                // alert('Письмо отправлено')
+                dispatch(setStatusLoadingAC('success'))
+                dispatch(modalWindowsOnOffAC("openPositive"))
             })
             .catch((err)=>{
-                alert('Письмо не отправлено')
+                dispatch(setStatusLoadingAC('failed'))
+                dispatch(modalWindowsOnOffAC("openNegative"))
             })
     }
 }
 
 
 type GetFormValuesACType = ReturnType<typeof getFormValuesAC>
-type ContactFormActions = GetFormValuesACType
+type ContactFormActions = GetFormValuesACType | SetStatusLoadingType | ModalWindowsOnOffType

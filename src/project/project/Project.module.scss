@@ -1,18 +1,10 @@
 @import "src/common/styles/sass/wariables.sass";
 
 .project {
-  //display: flex;
-  //flex-direction: column;
-  //align-items: center;
-  //text-align: center;
-  //margin-top: 50px;
+
 
   .imageProjectAndBtn {
-    //display: flex;
-    //justify-content: center;
-    //align-items: center;
-    //background-size: cover;
-    //background-position: center;
+
   }
    .buttonOpenProject {
      text-decoration: none;
@@ -27,19 +19,7 @@
      font-weight: 600;
      text-align: center;
    }
-  //.buttonOpenProjectFalse {
-  //  text-decoration: none;
-  //  cursor: pointer;
-  //  //outline: none;
-  //  background-color: rgba(28,28,28,0);
-  //  border: none;
-  //  color:$colorElementsDecoration;
-  //  margin: 0 auto;
-  //  transition: all 0.3s ease-in-out;
-  //  display: inline-block;
-  //  font-weight: 600;
-  //  text-align: center;
-  //}
+
 
   .imageProjectAndBtn img {
     width: 370px;

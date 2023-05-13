@@ -1,10 +1,16 @@
 import React, {ChangeEvent, FocusEventHandler, useState} from 'react';
 import styled from './Form.module.scss'
 import {ButtonLink} from "../../common/componets/button/ButtonLink";
-import { useFormik} from "formik";
-import {useAppDispatch} from "../../app/castomDispatchAndUseSelector/castomUseAppDispatch";
+import {useFormik} from "formik";
+import {useAppDispatch, useAppSelector} from "../../app/castomDispatchAndUseSelector/castomUseAppDispatch";
 import {getFormValuesTC} from "../contact-reducer";
-import * as Yup from 'yup';
+import {StatusLoadingType} from "../../app/app-reducer";
+import CircularProgress from '@mui/material/CircularProgress';
+import {green} from '@mui/material/colors';
+import Button from '@mui/material/Button';
+import Fab from '@mui/material/Fab';
+import CheckIcon from '@mui/icons-material/Check';
+import SaveIcon from '@mui/icons-material/Save';
 
 type FormikErrorType = {
     textName?: string
@@ -15,6 +21,7 @@ type FormikErrorType = {
 
 export const Form = () => {
     const dispatch = useAppDispatch()
+    const statusLoading = useAppSelector<StatusLoadingType>(state => state.appReducer.statusLoading)
 
     const validate = (values: FormikErrorType) => {
         const errors: FormikErrorType = {}
@@ -27,39 +34,38 @@ export const Form = () => {
         }
 
         //Валидация textName
-        if(!values.textName) {
+        if (!values.textName) {
             errors.textName = "Enter up to 30 characters"
         } else if (values.textName.length > 30) {
             errors.textName = "You can enter up to 30 characters"
-        } else if (!/^[A-Za-z\s]+$/.test(values.textName)) {
+        } else if (!/^[A-Za-zA-Яa-я\s]+$/.test(values.textName)) {
             errors.textName = "You can only enter letters"
         }
 
         //Валидация textSubject
-        if(!values.textSubject) {
+        if (!values.textSubject) {
             errors.textSubject = "Enter up to 60 characters"
-        } else if ( values.textSubject.length > 60) {
+        } else if (values.textSubject.length > 60) {
             errors.textSubject = "You can enter up to 60 characters"
         }
 
         //Валидация message
-        if(!values.message) {
+        if (!values.message) {
             errors.message = "Enter up to 1000 characters"
         } else if (values.message.length > 1000) {
             errors.message = "You can enter up to 1000 characters"
         }
 
         return errors
-        }
-
+    }
 
 
     const formik = useFormik({
         initialValues: {
-            textName:'',
+            textName: '',
             email: '',
             textSubject: '',
-            message:''
+            message: ''
         },
         validate,
         onSubmit: values => {
@@ -73,12 +79,14 @@ export const Form = () => {
     }
 
     const capitalize = (event: ChangeEvent<HTMLInputElement>) => {
-      const  str = event.target.value
+        const str = event.target.value
         return str
             .split(" ")
             .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
     };
+
+
 
     return (
         <>
@@ -91,7 +99,6 @@ export const Form = () => {
                     <h4 className={styled.title}>Message Me</h4>
                     <div className={styled.flex}>
                         <div className={styled.formGroupMini}>
-
                             <input
                                 className={styled.formControl}
                                 name={"textName"}
@@ -101,9 +108,9 @@ export const Form = () => {
                                 onChange={formik.handleChange}
                                 onBlur={formik.handleBlur}
                                 value={formik.values.textName}
-
                             />
-                            {formik.touched.textName && formik.errors.textName && <div className={styled.errorTextName}>{formik.errors.textName}</div>}
+                            {formik.touched.textName && formik.errors.textName &&
+                                <div className={styled.errorTextName}>{formik.errors.textName}</div>}
                         </div>
                         <div className={styled.formGroupMini}>
                             <input
@@ -113,7 +120,8 @@ export const Form = () => {
                                 placeholder="Email"
                                 {...formik.getFieldProps('email')}
                             />
-                            {formik.touched.email && formik.errors.email && <div className={styled.errorEmail}>{formik.errors.email}</div>}
+                            {formik.touched.email && formik.errors.email &&
+                                <div className={styled.errorEmail}>{formik.errors.email}</div>}
                         </div>
                         <div className={styled.formGroupStandard}>
                             <input
@@ -123,7 +131,8 @@ export const Form = () => {
                                 placeholder="Subject"
                                 {...formik.getFieldProps('textSubject')}
                             />
-                            {formik.touched.textSubject && formik.errors.textSubject && <div className={styled.textSubject}>{formik.errors.textSubject}</div>}
+                            {formik.touched.textSubject && formik.errors.textSubject &&
+                                <div className={styled.textSubject}>{formik.errors.textSubject}</div>}
                         </div>
                         <div className={styled.formMessage}>
                             <textarea
@@ -132,14 +141,27 @@ export const Form = () => {
                                 placeholder="Message"
                                 {...formik.getFieldProps('message')}
                             />
-                            {formik.touched.message && formik.errors.message && <div className={styled.message}>{formik.errors.message}</div>}
+                            {formik.touched.message && formik.errors.message &&
+                                <div className={styled.messageError}>{formik.errors.message}</div>}
                         </div>
                         <div className={styled.submit}>
-                            <ButtonLink
-                                title={'Send Message'}
-                                styleSettings={styled.buttonForm}
+                            <button
+                                className={statusLoading === 'loading' ? styled.buttonFormStatusLoading : styled.buttonForm }
                                 type={'submit'}
-                            />
+                                disabled={statusLoading === 'loading'}
+                            >
+                                Send Message
+                            </button>
+                            {statusLoading === 'loading' && <CircularProgress
+                                                                            size={30}
+                                                                            sx={{
+                                                                                color: green[500],
+                                                                                position: 'absolute',
+                                                                                top: 7,
+                                                                                left: 80,
+                                                                                zIndex: 1,
+                                                                            }}
+                                                                                                     />}
                         </div>
                     </div>
                 </form>

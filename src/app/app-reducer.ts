@@ -1,7 +1,8 @@
 
 
 const initialState: InitialStateType = {
-    collapsed: false
+    collapsed: false,
+    statusLoading: 'idle'
 }
 
 
@@ -11,7 +12,7 @@ export const appReducer = (state = initialState, action: AppActionType): Initial
             return {...state,collapsed: !action.collapsed}
         }
         default: {
-            return  state
+            return  {...state, statusLoading: action.statusLoading}
         }
     }
 
@@ -25,15 +26,26 @@ export const onOffCollapsedAC = (collapsed: boolean) => {
     } as const
 }
 
-
+export const setStatusLoadingAC = (statusLoading:StatusLoadingType) =>{
+    return {
+        type: "SET-STATUS-LOADING",
+        statusLoading
+    } as const
+}
 
 
 
 
 export type OnOffCollapsedType = ReturnType<typeof onOffCollapsedAC>
+export type SetStatusLoadingType = ReturnType<typeof setStatusLoadingAC>
 
-type AppActionType = OnOffCollapsedType
+type AppActionType = OnOffCollapsedType | SetStatusLoadingType
+
+
 
 type InitialStateType = {
     collapsed: boolean
+    statusLoading: StatusLoadingType
 }
+
+export type StatusLoadingType = 'idle' | 'loading' | "success" | 'failed'

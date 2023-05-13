@@ -6,11 +6,26 @@ import Title from "../common/componets/title/Title";
 import {ContactInfo} from "./ContactInfo/ContactInfo";
 import {motion} from "framer-motion";
 import {animationBlockDescription} from "../common/styles/motionSettings/motionSettings";
+import {useAppDispatch, useAppSelector} from "../app/castomDispatchAndUseSelector/castomUseAppDispatch";
+import {ModalWindow} from "../common/componets/modalWindow/ModalWindow";
+import {ModalStatusType, modalWindowsOnOffAC} from "../common/componets/modalWindow/modalReducer";
+import {StatusLoadingType} from "../app/app-reducer";
+
+
+
 
 export const Contacts = () => {
 
+
+
+    const  dispatch = useAppDispatch()
+    const modalWindowOnOff = useAppSelector<ModalStatusType>(state => state.modalWindowReducer.modalWindow)
+    const statusLoading = useAppSelector<StatusLoadingType>(state => state.appReducer.statusLoading)
+
     const contactsContainer = styleContainer.container + " " + styled.contactsContainer
     const animationMotion = animationBlockDescription
+
+    const onclickCloseModalWindow = () => dispatch(modalWindowsOnOffAC("closeStatus"))
 
     return (
         <motion.div
@@ -26,10 +41,28 @@ export const Contacts = () => {
                 variants={animationMotion}
             >
                 <Title title={'Get in Touch'} description={'Feel free to contact me anytimes'}/>
+
                 <motion.div className={styled.forms} variants={animationMotion}>
                     <Form/>
                     <ContactInfo/>
                 </motion.div>
+                {modalWindowOnOff === 'openPositive'
+                    ? <ModalWindow
+                    title={'Message'}
+                    footer={<button onClick={onclickCloseModalWindow}>close</button>}
+                    // visible={true}
+                    content={'Your message has been sent successfully'}
+                    onClose={onclickCloseModalWindow}
+                    />
+                    : <></>}
+                {modalWindowOnOff === 'openNegative' ? <ModalWindow
+                        title={'Message'}
+                        footer={<button onClick={onclickCloseModalWindow}>close</button>}
+                        // visible={true}
+                        content={'your message was not delivered. Try again later or other contact methods'}
+                        onClose={onclickCloseModalWindow}
+                    />
+                    : <></>}
             </motion.div>
         </motion.div>
     );

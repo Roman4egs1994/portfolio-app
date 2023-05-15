@@ -8,7 +8,7 @@ import Logotype from '../common/assets/logo/logoNew.png'
 export const Header = () => {
     return (
         <nav className={styled.header}>
-            <a className={styled.navBarBrand} href="https://roman4egs1994.github.io/potfolio-app">
+            <a className={styled.navBarBrand} href="https://roman4egs1994.github.io/portfolio-app/">
                 <img src={Logotype} alt="logo"/>
             </a>
             <div className={styled.displayNoneNavigate}>

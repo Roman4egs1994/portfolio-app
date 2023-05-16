@@ -60,7 +60,7 @@ export const AboutMe = () => {
                                     variants={animationMotion}
                         >
                             <motion.div className={styled.btn}>
-                                <form action="https://drive.google.com/file/d/1C8GQU4SnxP81BwDRcazCeJ6hECLRTDfK/view" target="_blank">
+                                <form action="https://drive.google.com/file/d/1DsLCJ6OQSw7ym1pUXYO-JdygySVd0qJT/view?usp=share_link" target="_blank">
                                 <ButtonLink  title={'Download CV'} />
                                 </form>
                             </motion.div>

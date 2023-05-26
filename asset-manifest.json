@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio-app/static/css/main.7780f248.css",
-    "main.js": "/portfolio-app/static/js/main.4717e1a7.js",
+    "main.css": "/portfolio-app/static/css/main.3d49f77b.css",
+    "main.js": "/portfolio-app/static/js/main.1f94968c.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio-app/static/js/787.1ed0c42c.chunk.js",
     "static/media/Profile.jpg": "/portfolio-app/static/media/Profile.38121b47e2ea8732948d.jpg",
     "static/media/item-1.jpg": "/portfolio-app/static/media/item-1.131e768dddf865ed5dcc.jpg",
@@ -14,12 +14,12 @@
     "static/media/reduxIcon.png": "/portfolio-app/static/media/reduxIcon.9d46587d436226ba4813.png",
     "static/media/storybookIcon.png": "/portfolio-app/static/media/storybookIcon.c0d11e818db3ec44a924.png",
     "index.html": "/portfolio-app/index.html",
-    "main.7780f248.css.map": "/portfolio-app/static/css/main.7780f248.css.map",
-    "main.4717e1a7.js.map": "/portfolio-app/static/js/main.4717e1a7.js.map",
+    "main.3d49f77b.css.map": "/portfolio-app/static/css/main.3d49f77b.css.map",
+    "main.1f94968c.js.map": "/portfolio-app/static/js/main.1f94968c.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio-app/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.7780f248.css",
-    "static/js/main.4717e1a7.js"
+    "static/css/main.3d49f77b.css",
+    "static/js/main.1f94968c.js"
   ]
 }

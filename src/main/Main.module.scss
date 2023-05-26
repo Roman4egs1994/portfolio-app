@@ -1,10 +1,19 @@
+.fluidAnimation{
+  //height: 100vh;
+  //width: 100vh;
+  position: absolute;
+  z-index: 1;
+  //padding: 50px;
+  cursor: pointer;
+}
 
 .main {
   //background-image:  url("#{'asd'}");
   height: calc((1vh) * 100);
-  background-color: #111;
+  background-color: rgb(17, 17, 17);
   overflow: hidden;
   padding: 0 50px;
+
 
   .particle{
     position: absolute;
@@ -13,6 +22,7 @@
     bottom: 0;
     right: 0;
     opacity: 0.8;
+
   }
 
   .container {
@@ -41,7 +51,7 @@
         position: relative;
         width: 100%;
         font-family: Poppins, sans-serif;
-
+        z-index: 2;
         .name {
           color: #fff;
           font-size: 70px;
@@ -50,6 +60,7 @@
           margin-bottom: 34px;
           line-height: 1.2;
           margin-top: 0;
+
           @media (min-width: 605px) and (max-width: 991.80px) {
             font-size: 62px ;
           }

@@ -11,15 +11,17 @@
   position: absolute;
   right: 0;
   top: 0;
-  z-index: 1030;
+  //z-index: 1030;
 
   .displayNoneNavigate {
+  z-index: 1030;
     @media (max-width: 767.80px) {
       display: none;
     }
   }
 
   .displayActiveNavigate {
+    z-index: 1030;
     @media (min-width: 768px) and (max-width: 10000px) {
       display: none;
     }
@@ -30,12 +32,11 @@
 
   .navBarBrand {
     display: block;
-
     margin-right: 0;
     padding-bottom: 13px;
     padding-top: 0;
     white-space: nowrap;
-
+    z-index: 1030;
     img {
       width: 80px;
       height: auto;

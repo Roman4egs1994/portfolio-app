@@ -10,6 +10,7 @@ export const WaveAnimation = (props: WaveAnimationPropsType) => {
     return (
         <>
             <FluidAnimation
+
                 // style={{ height: '100vh' }}
                 className={props.className}
             />

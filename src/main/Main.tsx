@@ -1,4 +1,3 @@
-
 import style from './Main.module.scss'
 import {IconSocialNetwork} from "../common/componets/icon/IconSocialNetwork/IconSocialNetworkType";
 import {ReactTypingEffectText} from "../common/componets/typingText/ReactTypingEffect";
@@ -8,7 +7,6 @@ import styleContainer from "../common/styles/Container.module.scss";
 import styled from "../project/Projects.module.scss";
 import {Header} from "../header/Header";
 // import FluidAnimation from 'react-fluid-animation'
-
 
 
 export const Main = () => {
@@ -26,48 +24,55 @@ export const Main = () => {
     const textTyping = ["React developer.", "Frontend developer."]
     // const projectsContainer = styleContainer.container + " " + styled.projectContainer
 
-    const [shouldRender, setShouldRender] = useState(true);
-    const [pixelsScrolled, setPixelsScrolled] = useState(0);
-    const MAX_SCROLL = 2000;
-
-    useEffect(() => {
-        const handleScroll = () => {
-            const scrollTop = window.scrollY;
-            const scrollBottom = scrollTop + window.innerHeight;
-            // @ts-ignore
-            const componentTop = ref.current.offsetTop;
-            // @ts-ignore
-            const componentBottom = componentTop + ref.current.clientHeight;
-
-            const pixelsScrolled = scrollTop + window.innerHeight - componentTop;
-
-            if (scrollBottom >= componentTop && scrollTop <= componentBottom) {
-                setShouldRender(true);
-            } else {
-                setShouldRender(false);
-            }
-
-            setPixelsScrolled(pixelsScrolled);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
-
-    useEffect(() => {
-        if (pixelsScrolled >= MAX_SCROLL) {
-            setShouldRender(false);
-        }
-    }, [pixelsScrolled]);
-
-    const ref = useRef<HTMLDivElement>(null);
+    // const [shouldRender, setShouldRender] = useState(true);
+    // const [pixelsScrolled, setPixelsScrolled] = useState(0);
+    // const MAX_SCROLL = 650;
+    //
+    // useEffect(() => {
+    //     const handleScroll = () => {
+    //         const scrollTop = window.scrollY;
+    //         const scrollBottom = scrollTop + window.innerHeight;
+    //
+    //         // @ts-ignore
+    //         const componentTop = ref.current.offsetTop;
+    //         // @ts-ignore
+    //         const componentBottom = componentTop + ref.current.clientHeight;
+    //         const pixelsScrolled = scrollTop + window.innerHeight - componentTop;
+    //
+    //         // if (scrollBottom >= componentTop && scrollTop <= componentBottom) {
+    //         //     setShouldRender(true);
+    //         //     console.log('IF')
+    //         // } else {
+    //         //     setShouldRender(false);
+    //         //     console.log('Else')
+    //         // }
+    //
+    //         console.log('scrollTop',scrollTop)
+    //         if(scrollTop <= MAX_SCROLL) {
+    //             setShouldRender(true)
+    //         } else {
+    //             setShouldRender(false)
+    //         }
+    //
+    //         setPixelsScrolled(pixelsScrolled);
+    //     };
+    //
+    //     window.addEventListener('scroll', handleScroll);
+    //     return () => window.removeEventListener('scroll', handleScroll);
+    // });
+    //
+    // // useEffect(() => {
+    // //     if (pixelsScrolled >= MAX_SCROLL) {
+    // //         setShouldRender(false);
+    // //     }
+    // // }, [pixelsScrolled]);
+    //
+    // const ref = useRef<HTMLDivElement>(null);
 
 
     return (
         <>
-            <div ref={ref}>
-                {shouldRender &&<WaveAnimation className={style.fluidAnimation}/>}
-            </div>
+            <WaveAnimation className={style.fluidAnimation}/>
             <div className={style.main}>
                 <div className={style.container}>
                     <div className={style.containerCenter}>

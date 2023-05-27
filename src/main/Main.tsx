@@ -72,7 +72,7 @@ export const Main = () => {
 
     return (
         <>
-            <WaveAnimation className={style.fluidAnimation}/>
+            <WaveAnimation className={style.fluidAnimation} />
             <div className={style.main}>
                 <div className={style.container}>
                     <div className={style.containerCenter}>

@@ -7,11 +7,21 @@ type WaveAnimationPropsType={
 }
 
 export const WaveAnimation = (props: WaveAnimationPropsType) => {
+
+    const defaultConfig = {
+        textureDownsample: 2,
+        densityDissipation: 0.98,
+        velocityDissipation: 0.99,
+        pressureDissipation: 0.9,
+        pressureIterations: 25,
+        curl: 36,
+        splatRadius: 0.01
+    };
+
     return (
         <>
             <FluidAnimation
-
-                // style={{ height: '100vh' }}
+                config={defaultConfig}
                 className={props.className}
             />
         </>
